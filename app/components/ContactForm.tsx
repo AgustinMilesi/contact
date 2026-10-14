@@ -59,6 +59,7 @@ export default function ContactForm() {
             <input
               {...register("name")}
               placeholder="Name"
+              aria-label="Name"
               className={inputClass}
             />
             {errors.name && (
@@ -71,6 +72,7 @@ export default function ContactForm() {
               type="email"
               {...register("email")}
               placeholder="Email"
+              aria-label="Email"
               className={inputClass}
             />
             {errors.email && (
@@ -82,6 +84,7 @@ export default function ContactForm() {
             <input
               {...register("subject")}
               placeholder="Subject"
+              aria-label="Subject"
               className={inputClass}
             />
             {errors.subject && (
@@ -93,6 +96,7 @@ export default function ContactForm() {
             <textarea
               {...register("message")}
               placeholder="Tell me about your project..."
+              aria-label="Message"
               rows={3}
               className={`${inputClass} resize-none`}
             />
