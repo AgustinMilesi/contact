@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { prisma } from "@/lib/prisma";
 import { contactSchema } from "@/lib/contact-schema";
+import { escapeHtml } from "@/lib/escape-html";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -19,11 +20,11 @@ export async function POST(req: Request) {
       replyTo: data.email,
       html: `
         <h2>Nuevo mensaje desde tu portfolio</h2>
-        <p><strong>Nombre:</strong> ${data.name}</p>
-        <p><strong>Email:</strong> ${data.email}</p>
-        <p><strong>Asunto:</strong> ${data.subject}</p>
+        <p><strong>Nombre:</strong> ${escapeHtml(data.name)}</p>
+        <p><strong>Email:</strong> ${escapeHtml(data.email)}</p>
+        <p><strong>Asunto:</strong> ${escapeHtml(data.subject)}</p>
         <p><strong>Mensaje:</strong></p>
-        <p>${data.message}</p>
+        <p>${escapeHtml(data.message).replace(/\n/g, "<br>")}</p>
       `,
     });
 
