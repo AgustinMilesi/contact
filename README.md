@@ -1,24 +1,21 @@
-# 📬 Contact Page
+# Contact Page
 
-A modern, full-stack contact form built with Next.js. Features client & server validation, PostgreSQL persistence, and real email delivery.
+A contact form built with Next.js. It validates on both the client and the server, saves every message in PostgreSQL and sends it to my inbox through Resend.
 
 ![Contact Page](./public/Screenshot.png)
 
-## 🚀 Live Demo
+Live demo: [agustinmilesi-contact.vercel.app](https://agustinmilesi-contact.vercel.app)
 
-**[agustinmilesi-contact.vercel.app](https://agustinmilesi-contact.vercel.app)**
+## What it does
 
-## ✨ Features
+- Validates with Zod in the browser and again on the server, using one shared schema
+- Stores messages in PostgreSQL (Neon) through Prisma
+- Emails each message with Resend, with the visitor's address set as reply-to
+- Escapes everything the visitor writes before putting it in the email
+- Hidden honeypot field to filter out basic spam bots
+- Toast feedback with Sonner, responsive layout, dark UI built with Tailwind CSS
 
-- Client + server validation with Zod
-- Messages persisted in PostgreSQL via Prisma
-- Email delivery with Resend
-- Toast notifications (Sonner)
-- Fully responsive
-- Dark premium UI with Tailwind CSS
-- TypeScript end-to-end
-
-## 🛠️ Tech Stack
+## Stack
 
 | Layer | Tech |
 |-------|------|
@@ -31,9 +28,7 @@ A modern, full-stack contact form built with Next.js. Features client & server v
 | Notifications | Sonner |
 | Deploy | Vercel |
 
-## 📦 Local Setup
-
-Clone the repo and install dependencies:
+## Running it locally
 
     git clone https://github.com/AgustinMilesi/contact-page.git
     cd contact-page
@@ -42,14 +37,12 @@ Clone the repo and install dependencies:
     npx prisma migrate dev
     npm run dev
 
-## 🔑 Environment Variables
-
-Create a `.env` file in the root with:
+Then fill in `.env`:
 
     DATABASE_URL="postgresql://..."
     RESEND_API_KEY="re_your_api_key"
     CONTACT_EMAIL="your@email.com"
 
-## 📄 License
+## License
 
 MIT
