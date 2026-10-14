@@ -2,7 +2,7 @@
 
 A modern, full-stack contact form built with Next.js. Features client & server validation, PostgreSQL persistence, and real email delivery.
 
-![Contact Page](./public/screenshot.png)
+![Contact Page](./public/Screenshot.png)
 
 ## 🚀 Live Demo
 
