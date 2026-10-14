@@ -9,7 +9,19 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const data = contactSchema.parse(body);
+    const parsed = contactSchema.safeParse(body);
+
+    if (!parsed.success) {
+      return NextResponse.json({ ok: false }, { status: 400 });
+    }
+
+    const { website, ...data } = parsed.data;
+
+    // A real person never sees this field. If it has content, it's a bot:
+    // answer as if everything went fine and drop the message.
+    if (website) {
+      return NextResponse.json({ ok: true });
+    }
 
     await prisma.contactMessage.create({ data });
 

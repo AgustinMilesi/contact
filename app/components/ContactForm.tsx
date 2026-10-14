@@ -101,6 +101,16 @@ export default function ContactForm() {
             )}
           </div>
 
+          {/* Honeypot: off-screen, people never fill it in */}
+          <input
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+            {...register("website")}
+            className="absolute -left-[9999px] h-0 w-0 opacity-0"
+          />
+
           <div className="pt-6">
             <button
               type="submit"

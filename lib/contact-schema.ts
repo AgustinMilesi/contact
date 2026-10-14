@@ -11,6 +11,7 @@ export const contactSchema = z.object({
     .trim()
     .min(10, "Tell me a bit more, 10 characters minimum")
     .max(5000, "That's too long, 5000 characters max"),
+  // Honeypot: hidden from people, bots tend to fill it in.
   website: z.string().optional(),
 });
 
