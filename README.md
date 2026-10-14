@@ -1,11 +1,15 @@
 # 📬 Contact Page
 
-A modern, full-stack contact form built with Next.js. Features client & server validation, database persistence, and real email delivery.
+A modern, full-stack contact form built with Next.js. Features client & server validation, PostgreSQL persistence, and real email delivery.
+
+## 🚀 Live Demo
+
+**[agustinmilesi-contact.vercel.app](https://agustinmilesi-contact.vercel.app)**
 
 ## ✨ Features
 
 - Client + server validation with Zod
-- Messages persisted in SQLite via Prisma
+- Messages persisted in PostgreSQL via Prisma
 - Email delivery with Resend
 - Toast notifications (Sonner)
 - Fully responsive
@@ -20,9 +24,10 @@ A modern, full-stack contact form built with Next.js. Features client & server v
 | Language | TypeScript |
 | Styling | Tailwind CSS |
 | Forms | React Hook Form + Zod |
-| Database | SQLite + Prisma |
+| Database | PostgreSQL (Neon) + Prisma |
 | Emails | Resend |
 | Notifications | Sonner |
+| Deploy | Vercel |
 
 ## 📦 Local Setup
 
@@ -39,7 +44,7 @@ Clone the repo and install dependencies:
 
 Create a `.env` file in the root with:
 
-    DATABASE_URL="file:./dev.db"
+    DATABASE_URL="postgresql://..."
     RESEND_API_KEY="re_your_api_key"
     CONTACT_EMAIL="your@email.com"
 
