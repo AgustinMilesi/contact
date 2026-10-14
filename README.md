@@ -2,6 +2,8 @@
 
 A modern, full-stack contact form built with Next.js. Features client & server validation, PostgreSQL persistence, and real email delivery.
 
+![Contact Page](./public/screenshot.png)
+
 ## 🚀 Live Demo
 
 **[agustinmilesi-contact.vercel.app](https://agustinmilesi-contact.vercel.app)**
