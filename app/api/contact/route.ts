@@ -1,21 +1,14 @@
 import { NextResponse } from "next/server";
-import { z } from "zod";
 import { Resend } from "resend";
 import { prisma } from "@/lib/prisma";
+import { contactSchema } from "@/lib/contact-schema";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-
-const schema = z.object({
-  name: z.string().min(2),
-  email: z.string().email(),
-  subject: z.string().min(3),
-  message: z.string().min(10),
-});
 
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const data = schema.parse(body);
+    const data = contactSchema.parse(body);
 
     await prisma.contactMessage.create({ data });
 

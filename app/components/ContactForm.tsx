@@ -3,17 +3,8 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
 import { toast } from "sonner";
-
-const schema = z.object({
-  name: z.string().min(2, "Min. 2 characters"),
-  email: z.string().email("Invalid email"),
-  subject: z.string().min(3, "Min. 3 characters"),
-  message: z.string().min(10, "Min. 10 characters"),
-});
-
-type FormData = z.infer<typeof schema>;
+import { contactSchema, type ContactInput } from "@/lib/contact-schema";
 
 export default function ContactForm() {
   const [loading, setLoading] = useState(false);
@@ -23,9 +14,9 @@ export default function ContactForm() {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm<FormData>({ resolver: zodResolver(schema) });
+  } = useForm<ContactInput>({ resolver: zodResolver(contactSchema) });
 
-  const onSubmit = async (data: FormData) => {
+  const onSubmit = async (data: ContactInput) => {
     setLoading(true);
     try {
       const res = await fetch("/api/contact", {
@@ -50,8 +41,6 @@ export default function ContactForm() {
 
   return (
     <div className="w-full max-w-6xl grid md:grid-cols-5 gap-12 md:gap-20">
-      
-      {/* LEFT: Form */}
       <div className="md:col-span-3 space-y-8">
         <div>
           <h1 className="text-5xl md:text-6xl font-light text-white leading-tight">
@@ -124,7 +113,6 @@ export default function ContactForm() {
         </form>
       </div>
 
-      {/* RIGHT: Contact info */}
       <div className="md:col-span-2 space-y-8 md:pt-24">
         <div className="w-14 h-14 rounded-full bg-rose-400 flex items-center justify-center">
           <svg
