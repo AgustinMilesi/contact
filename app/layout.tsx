@@ -16,6 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Agustín Milesi — Full Stack Developer",
   description: "Portfolio and web development projects",
+  icons: { icon: "/icon.svg" },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
