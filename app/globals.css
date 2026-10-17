@@ -1,11 +1,292 @@
 @import "tailwindcss";
 
-html, body {
-  background-color: #0a0f1f;
-  color: #f8fafc;
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
+:root {
+  /* Default Theme: Clay Violet */
+  --primary-accent: #6852f6;
+  --primary-accent-hover: #5538ea;
+  --primary-accent-gradient: linear-gradient(135deg, #6852f6 0%, #5538ea 100%);
+  --primary-accent-shadow: rgba(85, 56, 234, 0.35);
+  --primary-accent-rgb: 104, 82, 246;
+
+  /* Light Canvas Defaults */
+  --bg-page: #eef0fa;
+  --bg-card: #ffffff;
+  --bg-card-subtle: #f8f9fe;
+  --bg-hover: #f3f2fd;
+  --text-main: #18182e;
+  --text-muted: #72729a;
+  --border-card: #eae9f6;
+  --border-subtle: #f1f0fa;
 }
 
-input, textarea {
-  background-color: transparent;
+/* ==============================================================================
+   Dark Mode Canvas
+   ============================================================================== */
+[data-mode="dark"],
+.dark {
+  color-scheme: dark;
+  --bg-page: #0d0f17;
+  --bg-card: #151824;
+  --bg-card-subtle: #1c2030;
+  --bg-hover: #22273b;
+  --text-main: #f1f3f9;
+  --text-muted: #8b92a5;
+  --border-card: #262b3d;
+  --border-subtle: #1e2232;
+}
+
+/* ==============================================================================
+   Color Themes (Palettes)
+   ============================================================================== */
+[data-theme="violet"] {
+  --primary-accent: #6852f6;
+  --primary-accent-hover: #5538ea;
+  --primary-accent-gradient: linear-gradient(135deg, #6852f6 0%, #5538ea 100%);
+  --primary-accent-shadow: rgba(85, 56, 234, 0.35);
+  --primary-accent-rgb: 104, 82, 246;
+}
+
+[data-theme="indigo"] {
+  --primary-accent: #4f46e5;
+  --primary-accent-hover: #4338ca;
+  --primary-accent-gradient: linear-gradient(135deg, #6366f1 0%, #4338ca 100%);
+  --primary-accent-shadow: rgba(79, 70, 229, 0.35);
+  --primary-accent-rgb: 79, 70, 229;
+}
+
+[data-theme="rose"] {
+  --primary-accent: #f43f5e;
+  --primary-accent-hover: #e11d48;
+  --primary-accent-gradient: linear-gradient(135deg, #fb7185 0%, #e11d48 100%);
+  --primary-accent-shadow: rgba(244, 63, 94, 0.35);
+  --primary-accent-rgb: 244, 63, 94;
+}
+
+[data-theme="emerald"] {
+  --primary-accent: #10b981;
+  --primary-accent-hover: #059669;
+  --primary-accent-gradient: linear-gradient(135deg, #34d399 0%, #059669 100%);
+  --primary-accent-shadow: rgba(16, 185, 129, 0.35);
+  --primary-accent-rgb: 16, 185, 129;
+}
+
+[data-theme="amber"] {
+  --primary-accent: #f59e0b;
+  --primary-accent-hover: #d97706;
+  --primary-accent-gradient: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+  --primary-accent-shadow: rgba(245, 158, 11, 0.35);
+  --primary-accent-rgb: 245, 158, 11;
+}
+
+[data-theme="cyan"] {
+  --primary-accent: #06b6d4;
+  --primary-accent-hover: #0891b2;
+  --primary-accent-gradient: linear-gradient(135deg, #22d3ee 0%, #0891b2 100%);
+  --primary-accent-shadow: rgba(6, 182, 212, 0.35);
+  --primary-accent-rgb: 6, 182, 212;
+}
+
+/* ==============================================================================
+   Base Body Styling
+   ============================================================================== */
+html, body {
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  min-height: 100vh;
+  letter-spacing: -0.01em;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* ==============================================================================
+   Claymorphism Surface Styles
+   ============================================================================== */
+.clay-card {
+  background-color: var(--bg-card);
+  border-radius: 1.5rem;
+  border: 1px solid var(--border-card);
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.05), 0 4px 14px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-mode="dark"] .clay-card,
+.dark .clay-card {
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.45), 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.clay-card:hover {
+  box-shadow: 0 20px 42px -8px rgba(0, 0, 0, 0.09), 0 6px 18px rgba(0, 0, 0, 0.03);
+  transform: translateY(-2px);
+}
+
+[data-mode="dark"] .clay-card:hover,
+.dark .clay-card:hover {
+  box-shadow: 0 20px 42px -8px rgba(0, 0, 0, 0.6), 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+/* Clay Action Buttons */
+.clay-btn {
+  background: var(--primary-accent-gradient) !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 24px -4px var(--primary-accent-shadow);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.clay-btn:hover {
+  box-shadow: 0 14px 30px -4px var(--primary-accent-shadow);
+  transform: translateY(-2px);
+}
+
+.clay-btn:active {
+  transform: scale(0.98);
+}
+
+/* Smooth micro-animations */
+@keyframes smooth-lift {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-smooth-in {
+  animation: smooth-lift 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Dynamic Color Theme Utility Mappings */
+.bg-\[\#5E48E8\],
+.bg-\[\#5e48e8\],
+.bg-\[\#6852F6\],
+.bg-\[\#6852f6\],
+.bg-\[\#5538EA\],
+.bg-\[\#5538ea\] {
+  background-color: var(--primary-accent) !important;
+}
+
+.hover\:bg-\[\#5E48E8\]:hover,
+.hover\:bg-\[\#4F38D8\]:hover,
+.hover\:bg-\[\#4a2fe0\]:hover {
+  background-color: var(--primary-accent-hover) !important;
+}
+
+.text-\[\#5E48E8\],
+.text-\[\#5e48e8\],
+.text-\[\#6852F6\],
+.text-\[\#6852f6\],
+.text-\[\#5538EA\],
+.text-\[\#5538ea\] {
+  color: var(--primary-accent) !important;
+}
+
+.hover\:text-\[\#5E48E8\]:hover,
+.hover\:text-\[\#4F38D8\]:hover,
+.hover\:text-\[\#4a2fe0\]:hover {
+  color: var(--primary-accent-hover) !important;
+}
+
+.border-\[\#5E48E8\],
+.border-\[\#5e48e8\],
+.focus\:border-\[\#5E48E8\]:focus {
+  border-color: var(--primary-accent) !important;
+}
+
+.ring-\[\#5E48E8\],
+.focus\:ring-\[\#5E48E8\]\/15:focus,
+.focus\:ring-\[\#5E48E8\]\/20:focus {
+  --tw-ring-color: rgba(var(--primary-accent-rgb), 0.2) !important;
+}
+
+/* Legacy theme bridging */
+.bg-rose-400 {
+  background-color: var(--primary-accent) !important;
+  color: #ffffff !important;
+}
+.hover\:bg-rose-500:hover {
+  background-color: var(--primary-accent-hover) !important;
+}
+.text-rose-400 {
+  color: var(--primary-accent) !important;
+}
+.hover\:text-rose-400:hover {
+  color: var(--primary-accent-hover) !important;
+}
+.border-rose-400,
+.focus\:border-rose-400:focus,
+.hover\:border-rose-400:hover {
+  border-color: var(--primary-accent) !important;
+}
+
+/* Canvas Adaptations */
+.bg-\[\#0a0f1f\] {
+  background-color: var(--bg-page) !important;
+}
+
+[data-mode="dark"] .bg-\[\#EEF0FA\],
+[data-mode="dark"] .bg-\[\#eef0fa\],
+.dark .bg-\[\#EEF0FA\],
+.dark .bg-\[\#eef0fa\] {
+  background-color: var(--bg-page) !important;
+}
+
+[data-mode="dark"] .bg-white,
+.dark .bg-white {
+  background-color: var(--bg-card) !important;
+}
+
+[data-mode="dark"] .bg-\[\#F8F9FE\],
+.dark .bg-\[\#F8F9FE\] {
+  background-color: var(--bg-card-subtle) !important;
+}
+
+[data-mode="dark"] .text-\[\#18182E\],
+.dark .text-\[\#18182E\] {
+  color: var(--text-main) !important;
+}
+
+[data-mode="dark"] .text-\[\#72729A\],
+.dark .text-\[\#72729A\] {
+  color: var(--text-muted) !important;
+}
+
+[data-mode="dark"] .border-\[\#EAE9F6\],
+.dark .border-\[\#EAE9F6\] {
+  border-color: var(--border-card) !important;
+}
+
+/* Inputs & Textareas */
+[data-mode="dark"] input,
+[data-mode="dark"] textarea,
+.dark input,
+.dark textarea {
+  background-color: var(--bg-card-subtle) !important;
+  border-color: var(--border-card) !important;
+  color: var(--text-main) !important;
+}
+
+[data-mode="dark"] input::placeholder,
+[data-mode="dark"] textarea::placeholder,
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: var(--text-muted) !important;
+}
+
+/* Custom soft scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #c8cbdc;
+  border-radius: 9999px;
+}
+[data-mode="dark"] ::-webkit-scrollbar-thumb,
+.dark ::-webkit-scrollbar-thumb {
+  background: #2c3248;
 }
