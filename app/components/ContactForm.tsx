@@ -6,6 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
 import { contactSchema, type ContactInput } from "@/lib/contact-schema";
 import { PreferencesControls } from "@/components/PreferencesControls";
+import { PreferencesBlock } from "@/components/PreferencesBlock";
 
 export default function ContactForm() {
   const [loading, setLoading] = useState(false);
@@ -248,6 +249,9 @@ export default function ContactForm() {
               </div>
             </div>
           </div>
+
+          {/* Preferences Block (Color and Mode) */}
+          <PreferencesBlock compact />
         </div>
       </div>
 
