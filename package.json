@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
+    "test": "npx --yes tsx --test lib/contact-schema.test.ts",
     "postinstall": "prisma skills sync || exit 0"
   },
   "dependencies": {
