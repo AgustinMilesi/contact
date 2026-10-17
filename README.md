@@ -7,6 +7,8 @@ A sleek, modern contact and outreach application built with Next.js, TypeScript,
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=for-the-badge&logo=tailwind-css)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Neon-00E599?style=for-the-badge&logo=postgresql)
+[![GitHub stars](https://img.shields.io/github/stars/AgustinMilesi/contact-page?style=for-the-badge&logo=github&color=gold)](https://github.com/AgustinMilesi/contact-page/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/AgustinMilesi/contact-page?style=for-the-badge&logo=github&color=blue)](https://github.com/AgustinMilesi/contact-page/network/members)
 
 🌐 **Live Demo:** [agustinmilesi-contact.vercel.app](https://agustinmilesi-contact.vercel.app)
 
@@ -121,11 +123,19 @@ contact-page/
 
 This contact gateway is part of a unified 3-tier enterprise architecture:
 
-| Component | Repository | Role & Focus |
-|---|---|---|
-| **Retail ERP & POS** | [AgustinMilesi/erp](https://github.com/AgustinMilesi/erp) | Core business operating system, inventory tracking, cash shifts, thermal ticket printing, and checkout POS. |
-| **Customer Inbox SaaS** | [AgustinMilesi/saas](https://github.com/AgustinMilesi/saas) | Multi-tenant customer inbox, embeddable contact forms, contact directory, and CRM leads bridge. |
-| **Contact Page Portal** | [AgustinMilesi/contact-page](https://github.com/AgustinMilesi/contact-page) | High-intent lead generation portal, anti-spam validation gateway, and email delivery dispatch. *(This Repository)* |
+| Component | Repository | Live Deployment | Role & Focus |
+|---|---|---|---|
+| **Retail ERP & POS** | [AgustinMilesi/erp](https://github.com/AgustinMilesi/erp) | [milesi-erp.vercel.app](https://milesi-erp.vercel.app) | Core business operating system, inventory tracking, cash shifts, thermal ticket printing, and checkout POS. |
+| **Customer Inbox SaaS** | [AgustinMilesi/saas](https://github.com/AgustinMilesi/saas) | [saas-am.vercel.app](https://saas-am.vercel.app) | Multi-tenant customer inbox, embeddable contact forms, contact directory, and CRM leads bridge. |
+| **Contact Page Portal** | [AgustinMilesi/contact-page](https://github.com/AgustinMilesi/contact-page) | [agustinmilesi-contact.vercel.app](https://agustinmilesi-contact.vercel.app) | High-intent lead generation portal, anti-spam validation gateway, and email delivery dispatch. *(This Repository)* |
+
+---
+
+## ⭐ Show Your Support
+
+If you find this project useful or interesting, please give it a **Star** on GitHub! It helps more developers discover the ecosystem.
+
+[![Star on GitHub](https://img.shields.io/static/v1?label=Star%20Repo&message=%E2%AD%90&color=yellow&style=for-the-badge&logo=github)](https://github.com/AgustinMilesi/contact-page)
 
 ---
 
