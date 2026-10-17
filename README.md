@@ -64,18 +64,12 @@ cp .env.example .env
 
 ### ⚙️ Environment Variables
 
-Edit your `.env` file with your credentials:
-
-```env
-# PostgreSQL connection string (Neon or local)
-DATABASE_URL="postgresql://user:password@ep-xyz.neon.tech/neondb?sslmode=require"
-
-# Resend API Key (get yours at resend.com)
-RESEND_API_KEY="re_your_api_key"
-
-# Email address where inquiries will be received
-CONTACT_EMAIL="your-inbox@example.com"
-```
+| Variable | Required | Description | Example |
+|---|:---:|---|---|
+| `DATABASE_URL` | Yes | Neon pooled connection string (`-pooler.`) for Next.js runtime & queries | `postgresql://user:pass@ep-xyz-pooler.region.aws.neon.tech/neondb?sslmode=require` |
+| `DIRECT_URL` | Yes | Neon direct unpooled connection string for Prisma migrations & schema changes | `postgresql://user:pass@ep-xyz.region.aws.neon.tech/neondb?sslmode=require` |
+| `RESEND_API_KEY` | Yes | API key from [Resend](https://resend.com) for dispatching visitor messages | `re_your_api_key_here` |
+| `CONTACT_EMAIL` | Yes | Destination email where visitor inquiries are delivered | `your-inbox@example.com` |
 
 ### 🔄 Database Migration & Start Server
 
@@ -120,6 +114,18 @@ contact-page/
 1. **Input Sanitization:** Disallows raw HTML or script injections in message subject and body.
 2. **Honeypot Traps:** Traps bots filling phantom inputs off-screen.
 3. **Environment Security:** API keys are never exposed to the client bundle.
+
+---
+
+## 🌐 Complete Ecosystem Suite
+
+This contact gateway is part of a unified 3-tier enterprise architecture:
+
+| Component | Repository | Role & Focus |
+|---|---|---|
+| **Retail ERP & POS** | [AgustinMilesi/erp](https://github.com/AgustinMilesi/erp) | Core business operating system, inventory tracking, cash shifts, thermal ticket printing, and checkout POS. |
+| **Customer Inbox SaaS** | [AgustinMilesi/saas](https://github.com/AgustinMilesi/saas) | Multi-tenant customer inbox, embeddable contact forms, contact directory, and CRM leads bridge. |
+| **Contact Page Portal** | [AgustinMilesi/contact-page](https://github.com/AgustinMilesi/contact-page) | High-intent lead generation portal, anti-spam validation gateway, and email delivery dispatch. *(This Repository)* |
 
 ---
 
