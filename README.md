@@ -121,13 +121,14 @@ contact/
 
 ## 🌐 Complete Ecosystem Suite
 
-This contact gateway is part of a unified 3-tier retail & commercial enterprise architecture:
+This contact gateway is part of a unified 4-tier commercial software suite:
 
 | Component | Repository | Live Deployment | Role & Focus |
 |---|---|---|---|
 | **Retail Engine & POS** | [AgustinMilesi/retail](https://github.com/AgustinMilesi/retail) | [milesi-erp.vercel.app](https://milesi-erp.vercel.app) | Core cloud operating system, atomic inventory ledger, blind cash shifts, thermal ticket printing, and cashier POS. |
-| **Customer Inbox Platform** | [AgustinMilesi/inbox](https://github.com/AgustinMilesi/inbox) | [saas-am.vercel.app](https://saas-am.vercel.app) | Multi-tenant customer inbox, embeddable contact forms, contact directory, and CRM leads bridge. |
+| **Customer Inbox Platform** | [AgustinMilesi/inbox](https://github.com/AgustinMilesi/inbox) | [saas-am.vercel.app](https://saas-am.vercel.app) | Multi-tenant customer inquiry inbox, embeddable contact forms, contact directory, and CRM leads bridge. |
 | **Contact Portal** | [AgustinMilesi/contact](https://github.com/AgustinMilesi/contact) | [agustinmilesi-contact.vercel.app](https://agustinmilesi-contact.vercel.app) | High-intent lead generation portal, anti-spam validation gateway, and email delivery dispatch. *(This Repository)* |
+| **Freight Logistics OS** | [AgustinMilesi/cargo](https://github.com/AgustinMilesi/cargo) | *Local SQLite Engine* | Freight forwarding, container tracking milestones, international shipping routes, and freight billing settlements. |
 
 ---
 
