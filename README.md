@@ -1,4 +1,4 @@
-# 📬 Contact Page
+# 📬 Contact Portal
 
 A sleek, modern contact and outreach application built with Next.js, TypeScript, Tailwind CSS, and Neon PostgreSQL. Designed to capture high-intent inquiries with client/server schema validation, spam mitigation, and instant email dispatch via Resend.
 
@@ -7,8 +7,8 @@ A sleek, modern contact and outreach application built with Next.js, TypeScript,
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=for-the-badge&logo=tailwind-css)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Neon-00E599?style=for-the-badge&logo=postgresql)
-[![GitHub stars](https://img.shields.io/github/stars/AgustinMilesi/contact-page?style=for-the-badge&logo=github&color=gold)](https://github.com/AgustinMilesi/contact-page/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/AgustinMilesi/contact-page?style=for-the-badge&logo=github&color=blue)](https://github.com/AgustinMilesi/contact-page/network/members)
+[![GitHub stars](https://img.shields.io/github/stars/AgustinMilesi/contact?style=for-the-badge&logo=github&color=gold)](https://github.com/AgustinMilesi/contact/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/AgustinMilesi/contact?style=for-the-badge&logo=github&color=blue)](https://github.com/AgustinMilesi/contact/network/members)
 
 🌐 **Live Demo:** [agustinmilesi-contact.vercel.app](https://agustinmilesi-contact.vercel.app)
 
@@ -54,8 +54,8 @@ A sleek, modern contact and outreach application built with Next.js, TypeScript,
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/AgustinMilesi/contact-page.git
-cd contact-page
+git clone https://github.com/AgustinMilesi/contact.git
+cd contact
 
 # 2. Install dependencies
 npm install
@@ -90,7 +90,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 ## 📂 Project Structure
 
 ```
-contact-page/
+contact/
 ├── app/
 │   ├── api/
 │   │   └── contact/
@@ -121,13 +121,14 @@ contact-page/
 
 ## 🌐 Complete Ecosystem Suite
 
-This contact gateway is part of a unified 3-tier enterprise architecture:
+This contact gateway is part of a unified 4-tier retail & commercial enterprise architecture:
 
 | Component | Repository | Live Deployment | Role & Focus |
 |---|---|---|---|
-| **Retail ERP & POS** | [AgustinMilesi/erp](https://github.com/AgustinMilesi/erp) | [milesi-erp.vercel.app](https://milesi-erp.vercel.app) | Core business operating system, inventory tracking, cash shifts, thermal ticket printing, and checkout POS. |
+| **Retail ERP & POS** | [AgustinMilesi/erp](https://github.com/AgustinMilesi/erp) | [milesi-erp.vercel.app](https://milesi-erp.vercel.app) | Core cloud operating system, atomic inventory ledger, blind cash shifts, thermal ticket printing, and cashier POS. |
 | **Customer Inbox SaaS** | [AgustinMilesi/saas](https://github.com/AgustinMilesi/saas) | [saas-am.vercel.app](https://saas-am.vercel.app) | Multi-tenant customer inbox, embeddable contact forms, contact directory, and CRM leads bridge. |
-| **Contact Page Portal** | [AgustinMilesi/contact-page](https://github.com/AgustinMilesi/contact-page) | [agustinmilesi-contact.vercel.app](https://agustinmilesi-contact.vercel.app) | High-intent lead generation portal, anti-spam validation gateway, and email delivery dispatch. *(This Repository)* |
+| **Contact Portal** | [AgustinMilesi/contact](https://github.com/AgustinMilesi/contact) | [agustinmilesi-contact.vercel.app](https://agustinmilesi-contact.vercel.app) | High-intent lead generation portal, anti-spam validation gateway, and email delivery dispatch. *(This Repository)* |
+| **Offline Retail ERP** | [AgustinMilesi/marierp](https://github.com/AgustinMilesi/marierp) | [GitHub Repository](https://github.com/AgustinMilesi/marierp) | 100% offline-first grocery & retail POS with IndexedDB storage, order tabs, and luxury teal/gold interface. |
 
 ---
 
@@ -135,7 +136,7 @@ This contact gateway is part of a unified 3-tier enterprise architecture:
 
 If you find this project useful or interesting, please give it a **Star** on GitHub! It helps more developers discover the ecosystem.
 
-[![Star on GitHub](https://img.shields.io/static/v1?label=Star%20Repo&message=%E2%AD%90&color=yellow&style=for-the-badge&logo=github)](https://github.com/AgustinMilesi/contact-page)
+[![Star on GitHub](https://img.shields.io/static/v1?label=Star%20Repo&message=%E2%AD%90&color=yellow&style=for-the-badge&logo=github)](https://github.com/AgustinMilesi/contact)
 
 ---
 
