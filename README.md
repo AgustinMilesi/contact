@@ -1,9 +1,9 @@
 # 📬 Contact Portal & Lead Gateway
 
-Portal de contacto rápido y captura de oportunidades comerciales. Diseñado con validación dual estricta (Zod en cliente y servidor), protección anti-spam silenciosa (honeypot), almacenamiento persistente en PostgreSQL y despacho de emails transaccionales en tiempo real con Resend.
+A modern, lightweight contact page and lead capture gateway. Built with end-to-end schema validation (Zod on both client and server), silent bot mitigation (honeypot), persistent storage in PostgreSQL, and real-time transactional email delivery with Resend.
 
 <p align="left">
-  <a href="https://agustinmilesi-contact.vercel.app"><img src="https://img.shields.io/badge/Demo%20en%20Vivo-agustinmilesi--contact.vercel.app-f43f5e?style=for-the-badge&logo=vercel" alt="Live Demo" /></a>
+  <a href="https://agustinmilesi-contact.vercel.app"><img src="https://img.shields.io/badge/Live%20Demo-agustinmilesi--contact.vercel.app-f43f5e?style=for-the-badge&logo=vercel" alt="Live Demo" /></a>
   <img src="https://img.shields.io/badge/Next.js-16.4-black?style=for-the-badge&logo=next.js" alt="Next.js" />
   <img src="https://img.shields.io/badge/React-19.3-20232a?style=for-the-badge&logo=react" alt="React 19" />
   <img src="https://img.shields.io/badge/TypeScript-5.0-3178c6?style=for-the-badge&logo=typescript" alt="TypeScript" />
@@ -13,60 +13,60 @@ Portal de contacto rápido y captura de oportunidades comerciales. Diseñado con
 
 ---
 
-## 🎯 ¿Para qué sirve?
+## 🎯 What is it for?
 
-- **Captura confiable de mensajes**: Formulario interactivo con retroalimentación inmediata de errores mediante esquemas Zod compartidos entre frontend y backend.
-- **Protección anti-spam transparente**: Trampa honeypot invisible que bloquea bots automatizados sin interrumpir al usuario con captchas molestos.
-- **Entrega de correo inmediata**: Envío transaccional a través de la API de Resend, configurando automáticamente el correo del visitante en el encabezado `Reply-To`.
-- **Registro persistente**: Cada mensaje se almacena de forma segura en una base de datos PostgreSQL Serverless en Neon mediante Prisma ORM.
-
----
-
-## ✨ Características Principales
-
-- ⚡ **Validación Dual con Zod**: Mismo esquema de validación consumido por React Hook Form y por los Route Handlers de Next.js.
-- 🛡️ **Seguridad y Sanitización**: Sanitización estricta de strings y escape de HTML para prevenir inyecciones antes del despacho.
-- 🎨 **Interfaz Glassmorphism**: Estética moderna en modo oscuro, micro-interacciones suaves y notificaciones con Sonner.
-- 💾 **Persistencia Serverless**: Base de datos Postgres en la nube con pooling de conexiones para despliegue sin servidor.
+- **Reliable message capture**: An interactive form providing instant validation feedback through a shared Zod schema between client and server.
+- **Silent anti-spam protection**: An invisible honeypot field catches automated web crawlers without bothering legitimate visitors with captchas.
+- **Instant email notifications**: Dispatches formatted messages via Resend with the visitor's email address set as `Reply-To`.
+- **Persistent cloud storage**: Inquiries are saved safely in serverless PostgreSQL (Neon) via Prisma ORM for record keeping.
 
 ---
 
-## 🛠️ Stack Tecnológico
+## ✨ Key Features
+
+- ⚡ **Dual-Layer Validation**: Single source of truth using a shared Zod schema between React Hook Form and Next.js Route Handlers.
+- 🛡️ **Sanitization & Security**: Input cleaning and HTML entity escaping before email delivery to prevent injection attacks.
+- 🎨 **Minimalist Glassmorphism UI**: Clean dark theme with smooth micro-interactions and toast notifications via Sonner.
+- 💾 **Serverless Postgres Persistence**: Cloud database storage with built-in connection pooling for instant scaling.
+
+---
+
+## 🛠️ Tech Stack
 
 - **Frontend & Backend**: Next.js 16 (App Router) + React 19
-- **Lenguaje**: TypeScript (tipado estricto)
-- **Estilos**: Tailwind CSS 4
-- **Formularios & Validación**: React Hook Form + Zod
-- **Base de Datos**: PostgreSQL Serverless en Neon
-- **ORM**: Prisma
-- **Servicio de Email**: Resend API
-- **Notificaciones**: Sonner Toasts
+- **Language**: TypeScript (strictly typed)
+- **Styling**: Tailwind CSS 4
+- **Forms & Validation**: React Hook Form + Zod
+- **Database**: PostgreSQL Serverless (Neon)
+- **ORM**: Prisma ORM
+- **Email Delivery**: Resend API
+- **Notifications**: Sonner
 
 ---
 
-## 🚀 Instalación Local
+## 🚀 Local Setup
 
 ```bash
-# 1. Clonar el repositorio
+# 1. Clone the repository
 git clone https://github.com/AgustinMilesi/contact.git
 cd contact
 
-# 2. Instalar dependencias
+# 2. Install dependencies
 npm install
 
-# 3. Configurar variables de entorno
+# 3. Configure environment variables
 cp .env.example .env
 
-# 4. Generar cliente Prisma y correr
+# 4. Generate Prisma client & start development server
 npx prisma generate
 npm run dev
 ```
 
-Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-### 🔗 Otros Proyectos
-- [💳 Retail Engine & POS](https://github.com/AgustinMilesi/retail) — Punto de venta, arqueo ciego de caja y control de inventario.
-- [📥 Customer Inbox SaaS](https://github.com/AgustinMilesi/inbox) — Bandeja de entrada multi-inquilino y formularios embebibles.
-- [🌐 OneCargo Logistics](https://github.com/AgustinMilesi/cargo) — Sistema operativo de fletes internacionales y despacho de aduana.
+### 🔗 Other Projects
+- [💳 Retail Engine & POS](https://github.com/AgustinMilesi/retail) — Point of sale, atomic stock control, and cash drawer audits.
+- [📥 Customer Inbox SaaS](https://github.com/AgustinMilesi/inbox) — Multi-tenant customer inquiry inbox and embeddable forms.
+- [🌐 OneCargo Logistics](https://github.com/AgustinMilesi/cargo) — International freight forwarding, customs clearance, and container tracking.
