@@ -70,3 +70,4 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 - [💳 Retail Engine & POS](https://github.com/AgustinMilesi/retail) — Point of sale, atomic stock control, and cash drawer audits.
 - [📥 Customer Inbox SaaS](https://github.com/AgustinMilesi/inbox) — Multi-tenant customer inquiry inbox and embeddable forms.
 - [🌐 OneCargo Logistics](https://github.com/AgustinMilesi/cargo) — International freight forwarding, customs clearance, and container tracking.
+- [📱 PocketExpenses](https://github.com/AgustinMilesi/expenses) — Mobile cost and subscription tracker with React Native & NativeWind.
