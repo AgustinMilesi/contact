@@ -1,144 +1,72 @@
-# 📬 Contact Portal
+# 📬 Contact Portal & Lead Gateway
 
-A sleek, modern contact and outreach application built with Next.js, TypeScript, Tailwind CSS, and Neon PostgreSQL. Designed to capture high-intent inquiries with client/server schema validation, spam mitigation, and instant email dispatch via Resend.
+Portal de contacto rápido y captura de oportunidades comerciales. Diseñado con validación dual estricta (Zod en cliente y servidor), protección anti-spam silenciosa (honeypot), almacenamiento persistente en PostgreSQL y despacho de emails transaccionales en tiempo real con Resend.
 
-![Live Demo Preview](https://img.shields.io/badge/Status-Live%20in%20Production-success?style=for-the-badge)
-![Next.js](https://img.shields.io/badge/Next.js-16.4-black?style=for-the-badge&logo=next.js)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)
-![TailwindCSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=for-the-badge&logo=tailwind-css)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Neon-00E599?style=for-the-badge&logo=postgresql)
-[![GitHub stars](https://img.shields.io/github/stars/AgustinMilesi/contact?style=for-the-badge&logo=github&color=gold)](https://github.com/AgustinMilesi/contact/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/AgustinMilesi/contact?style=for-the-badge&logo=github&color=blue)](https://github.com/AgustinMilesi/contact/network/members)
-
-🌐 **Live Demo:** [agustinmilesi-contact.vercel.app](https://agustinmilesi-contact.vercel.app)
-
----
-
-## ✨ Features & Highlights
-
-- ⚡ **Dual-Layer Validation:** Single source of truth using a shared Zod schema on both React Hook Form (client) and Next.js Route Handlers (server).
-- 🛡️ **Anti-Spam & Security:**
-  - Invisible honeypot field traps automated spam crawlers.
-  - Strict input sanitization and HTML escaping prior to email delivery.
-  - Server-side body size constraints.
-- ✉️ **Transactional Email Dispatch:** Dispatches formatted emails using Resend with visitor email configured as the `Reply-To` header.
-- 💾 **Persistent Database Storage:** Automatically records all received inquiries in Neon Serverless PostgreSQL through Prisma ORM.
-- 🎨 **Minimalist Glassmorphism UI:** Ultra-clean dark aesthetic, custom paper-airplane action icon, responsive multi-column layout, and interactive toasts via Sonner.
+<p align="left">
+  <a href="https://agustinmilesi-contact.vercel.app"><img src="https://img.shields.io/badge/Demo%20en%20Vivo-agustinmilesi--contact.vercel.app-f43f5e?style=for-the-badge&logo=vercel" alt="Live Demo" /></a>
+  <img src="https://img.shields.io/badge/Next.js-16.4-black?style=for-the-badge&logo=next.js" alt="Next.js" />
+  <img src="https://img.shields.io/badge/React-19.3-20232a?style=for-the-badge&logo=react" alt="React 19" />
+  <img src="https://img.shields.io/badge/TypeScript-5.0-3178c6?style=for-the-badge&logo=typescript" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/PostgreSQL-Neon-00E599?style=for-the-badge&logo=postgresql" alt="PostgreSQL" />
+  <img src="https://img.shields.io/badge/Prisma-ORM-2D3748?style=for-the-badge&logo=prisma" alt="Prisma" />
+</p>
 
 ---
 
-## 🛠️ Tech Stack
+## 🎯 ¿Para qué sirve?
 
-| Layer | Technology | Details |
-|---|---|---|
-| **Framework** | Next.js 16 (App Router) | Server components, edge routing, Turbopack |
-| **Language** | TypeScript 5 | Strict type checking & zero `any` policy |
-| **Styling** | Tailwind CSS 4 | Custom dark mode palette with rose accents |
-| **Forms & Validation** | React Hook Form + Zod | Shared schema, instant inline error states |
-| **Database** | PostgreSQL (Neon) | Serverless Postgres with connection pooling |
-| **ORM** | Prisma | Automated schema migrations & typed queries |
-| **Email Service** | Resend | High deliverability transactional email API |
-| **Notifications** | Sonner | Accessible, responsive notification toasts |
-| **Hosting** | Vercel | Global CDN deployment and serverless compute |
+- **Captura confiable de mensajes**: Formulario interactivo con retroalimentación inmediata de errores mediante esquemas Zod compartidos entre frontend y backend.
+- **Protección anti-spam transparente**: Trampa honeypot invisible que bloquea bots automatizados sin interrumpir al usuario con captchas molestos.
+- **Entrega de correo inmediata**: Envío transaccional a través de la API de Resend, configurando automáticamente el correo del visitante en el encabezado `Reply-To`.
+- **Registro persistente**: Cada mensaje se almacena de forma segura en una base de datos PostgreSQL Serverless en Neon mediante Prisma ORM.
 
 ---
 
-## 🚀 Quickstart & Local Setup
+## ✨ Características Principales
 
-### Prerequisites
-- **Node.js** 20.9+ installed
-- A **PostgreSQL** database (a free database on [Neon.tech](https://neon.tech) works out of the box)
-- A **Resend** account for email delivery (optional in development)
+- ⚡ **Validación Dual con Zod**: Mismo esquema de validación consumido por React Hook Form y por los Route Handlers de Next.js.
+- 🛡️ **Seguridad y Sanitización**: Sanitización estricta de strings y escape de HTML para prevenir inyecciones antes del despacho.
+- 🎨 **Interfaz Glassmorphism**: Estética moderna en modo oscuro, micro-interacciones suaves y notificaciones con Sonner.
+- 💾 **Persistencia Serverless**: Base de datos Postgres en la nube con pooling de conexiones para despliegue sin servidor.
 
-### Step-by-Step Installation
+---
+
+## 🛠️ Stack Tecnológico
+
+- **Frontend & Backend**: Next.js 16 (App Router) + React 19
+- **Lenguaje**: TypeScript (tipado estricto)
+- **Estilos**: Tailwind CSS 4
+- **Formularios & Validación**: React Hook Form + Zod
+- **Base de Datos**: PostgreSQL Serverless en Neon
+- **ORM**: Prisma
+- **Servicio de Email**: Resend API
+- **Notificaciones**: Sonner Toasts
+
+---
+
+## 🚀 Instalación Local
 
 ```bash
-# 1. Clone the repository
+# 1. Clonar el repositorio
 git clone https://github.com/AgustinMilesi/contact.git
 cd contact
 
-# 2. Install dependencies
+# 2. Instalar dependencias
 npm install
 
-# 3. Configure environment variables
+# 3. Configurar variables de entorno
 cp .env.example .env
-```
 
-### ⚙️ Environment Variables
-
-| Variable | Required | Description | Example |
-|---|:---:|---|---|
-| `DATABASE_URL` | Yes | Neon pooled connection string (`-pooler.`) for Next.js runtime & queries | `postgresql://user:pass@ep-xyz-pooler.region.aws.neon.tech/neondb?sslmode=require` |
-| `DIRECT_URL` | Yes | Neon direct unpooled connection string for Prisma migrations & schema changes | `postgresql://user:pass@ep-xyz.region.aws.neon.tech/neondb?sslmode=require` |
-| `RESEND_API_KEY` | Yes | API key from [Resend](https://resend.com) for dispatching visitor messages | `re_your_api_key_here` |
-| `CONTACT_EMAIL` | Yes | Destination email where visitor inquiries are delivered | `your-inbox@example.com` |
-
-### 🔄 Database Migration & Start Server
-
-```bash
-# Run database migrations
-npx prisma migrate dev --name init
-
-# Start development server
+# 4. Generar cliente Prisma y correr
+npx prisma generate
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
 ---
 
-## 📂 Project Structure
-
-```
-contact/
-├── app/
-│   ├── api/
-│   │   └── contact/
-│   │       └── route.ts         # Server-side submission handler & email dispatcher
-│   ├── components/
-│   │   └── ContactForm.tsx      # Interactive contact form with paper airplane badge
-│   ├── globals.css              # Dark theme base & Tailwind CSS directives
-│   ├── layout.tsx               # Root application shell & Sonner toaster
-│   └── page.tsx                 # Main landing view
-├── lib/
-│   ├── contact-schema.ts        # Shared Zod validation schema
-│   ├── db.ts                    # Prisma database client singleton
-│   └── email.ts                 # Resend API integration helper
-├── prisma/
-│   └── schema.prisma            # Message entity definition
-└── package.json
-```
-
----
-
-## 🔒 Security Best Practices
-
-1. **Input Sanitization:** Disallows raw HTML or script injections in message subject and body.
-2. **Honeypot Traps:** Traps bots filling phantom inputs off-screen.
-3. **Environment Security:** API keys are never exposed to the client bundle.
-
----
-
-## 🌐 Complete Ecosystem Suite
-
-This contact gateway is part of a unified 4-tier commercial software suite:
-
-| Component | Repository | Live Deployment | Role & Focus |
-|---|---|---|---|
-| **Retail Engine & POS** | [AgustinMilesi/retail](https://github.com/AgustinMilesi/retail) | [milesi-erp.vercel.app](https://milesi-erp.vercel.app) | Core cloud operating system, atomic inventory ledger, blind cash shifts, thermal ticket printing, and cashier POS. |
-| **Customer Inbox Platform** | [AgustinMilesi/inbox](https://github.com/AgustinMilesi/inbox) | [saas-am.vercel.app](https://saas-am.vercel.app) | Multi-tenant customer inquiry inbox, embeddable contact forms, contact directory, and CRM leads bridge. |
-| **OneCargo (Freight Logistics OS)** | [AgustinMilesi/cargo](https://github.com/AgustinMilesi/cargo) | [cargo-am.vercel.app](https://cargo-am.vercel.app) | International freight forwarding, container GPS milestones, customs dispatch, and rate settlements. |
-
----
-
-## ⭐ Show Your Support
-
-If you find this project useful or interesting, please give it a **Star** on GitHub! It helps more developers discover the ecosystem.
-
-[![Star on GitHub](https://img.shields.io/static/v1?label=Star%20Repo&message=%E2%AD%90&color=yellow&style=for-the-badge&logo=github)](https://github.com/AgustinMilesi/contact)
-
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
+### 🔗 Otros Proyectos
+- [💳 Retail Engine & POS](https://github.com/AgustinMilesi/retail) — Punto de venta, arqueo ciego de caja y control de inventario.
+- [📥 Customer Inbox SaaS](https://github.com/AgustinMilesi/inbox) — Bandeja de entrada multi-inquilino y formularios embebibles.
+- [🌐 OneCargo Logistics](https://github.com/AgustinMilesi/cargo) — Sistema operativo de fletes internacionales y despacho de aduana.
