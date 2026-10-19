@@ -33,9 +33,21 @@ yarn-error.log*
 .env.local
 .env.production
 .env.development
+.env*
+.env.*
 
 # EXCEPCIÓN: .env.example SÍ se sube
 !.env.example
+
+# === Seguridad y credenciales ===
+*.key
+*.pem
+*.cert
+*.crt
+*.pfx
+secrets.*
+credentials.*
+id_rsa*
 
 # Vercel
 .vercel
