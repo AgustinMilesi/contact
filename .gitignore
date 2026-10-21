@@ -59,3 +59,9 @@ next-env.d.ts
 # Prisma
 prisma/dev.db
 prisma/dev.db-journal
+# Antigravity Skills & Local Agent Tooling
+.agents/
+.agent/
+.gemini/
+skills-lock.json
+

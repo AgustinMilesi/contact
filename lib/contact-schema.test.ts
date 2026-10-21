@@ -4,8 +4,8 @@ import { contactSchema } from "./contact-schema";
 
 test("contactSchema accepts valid contact messages", () => {
   const result = contactSchema.safeParse({
-    name: "Agustin",
-    email: "agustin@example.com",
+    name: "Enterprise Partner",
+    email: "partner@example.com",
     subject: "Project inquiry",
     message: "Hello! I would like to consult on a web development project.",
   });
@@ -28,7 +28,7 @@ test("contactSchema catches bot submissions via honeypot field", () => {
 
 test("contactSchema rejects invalid email format", () => {
   const result = contactSchema.safeParse({
-    name: "Agustin",
+    name: "Enterprise Partner",
     email: "not-an-email",
     subject: "Testing",
     message: "Valid message content here.",
@@ -38,7 +38,7 @@ test("contactSchema rejects invalid email format", () => {
 
 test("contactSchema enforces minimum length on message", () => {
   const result = contactSchema.safeParse({
-    name: "Agustin",
+    name: "Enterprise Partner",
     email: "test@domain.com",
     subject: "Testing",
     message: "Too short",
