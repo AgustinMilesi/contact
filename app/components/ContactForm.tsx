@@ -37,23 +37,23 @@ export default function ContactForm() {
   };
 
   const labelClass =
-    "block text-[11px] font-bold uppercase tracking-[0.15em] text-[#72729A] mb-1.5";
+    "block text-[11px] font-bold uppercase tracking-[0.15em] text-[var(--text-muted,#94A3B8)] mb-1.5";
   const inputClass =
-    "w-full bg-[#F8F9FE] border border-[#E2E1F4] rounded-2xl px-4 py-3 text-sm font-medium text-[#18182E] placeholder:text-[#94A3B8] outline-none transition-all duration-200 focus:bg-white focus:border-[#5E48E8] focus:ring-4 focus:ring-[#5E48E8]/15 shadow-inner";
+    "w-full bg-[var(--bg-card-subtle,#0F1520)] border border-[var(--border-card,#1E293B)] rounded-2xl px-4 py-3 text-sm font-medium text-[var(--text-main,#ffffff)] placeholder:text-[var(--text-muted,#94A3B8)] outline-none transition-all duration-200 focus:bg-[var(--bg-card,#121824)] focus:border-[var(--primary-accent)] focus:ring-4 focus:ring-[var(--primary-accent-shadow)] shadow-inner";
 
   return (
     <div className="w-full max-w-6xl mx-auto flex flex-col justify-between min-h-[90vh] py-4 space-y-10 animate-smooth-in">
       {/* Top Navigation Bar */}
-      <header className="flex items-center justify-between pb-4 border-b border-[#EAE9F6]">
+      <header className="flex items-center justify-between pb-4 border-b border-[var(--border-card,#1E293B)]">
         <div className="flex items-center gap-3">
-          <div className="size-10 rounded-2xl bg-gradient-to-br from-[#6852F6] to-[#5538EA] flex items-center justify-center text-white font-black text-sm shadow-[0_4px_12px_rgba(85,56,234,0.35)]">
+          <div className="size-10 rounded-2xl bg-[var(--primary-accent)] flex items-center justify-center text-[var(--primary-accent-text,#0A0E14)] font-black text-sm shadow-[0_4px_12px_var(--primary-accent-shadow)]">
             AM
           </div>
           <div>
-            <span className="font-bold tracking-tight text-base text-[#18182E] block leading-none">
+            <span className="font-bold tracking-tight text-base text-[var(--text-main,#ffffff)] block leading-none">
               Agustín Milesi
             </span>
-            <span className="text-xs text-[#72729A] font-medium">Full Stack Developer</span>
+            <span className="text-xs text-[var(--text-muted,#94A3B8)] font-medium">Full Stack Developer</span>
           </div>
         </div>
         <PreferencesControls />
@@ -61,21 +61,21 @@ export default function ContactForm() {
 
       {/* Main Two-Column Layout */}
       <div className="grid md:grid-cols-5 gap-8 md:gap-12 items-start my-auto py-6">
-        {/* Left Column: Headline and Clay Form Card */}
+        {/* Left Column: Headline and Form Card */}
         <div className="md:col-span-3 space-y-6">
           <div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-light text-[#64748B] leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-light text-[var(--text-muted,#94A3B8)] leading-tight">
               Let&apos;s build
             </h1>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-light text-[#64748B] leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-light text-[var(--text-muted,#94A3B8)] leading-tight">
               something
             </h1>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-[#5E48E8] leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-[var(--primary-accent)] leading-tight">
               great together.
             </h1>
           </div>
 
-          <div className="clay-card p-6 sm:p-8 rounded-3xl">
+          <div className="clay-card p-6 sm:p-8 rounded-3xl bg-[var(--bg-card,#121824)] border border-[var(--border-card,#1E293B)] shadow-2xl">
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
               <div>
                 <label className={labelClass} htmlFor="name">Name</label>
@@ -149,7 +149,7 @@ export default function ContactForm() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="clay-btn w-full sm:w-auto px-8 py-3.5 text-white font-bold rounded-2xl text-xs uppercase tracking-wider flex items-center justify-center gap-2 select-none cursor-pointer"
+                  className="clay-btn w-full sm:w-auto px-8 py-3.5 text-[var(--primary-accent-text,#0A0E14)] font-black rounded-2xl text-xs uppercase tracking-wider flex items-center justify-center gap-2 select-none cursor-pointer shadow-[0_10px_24px_var(--primary-accent-shadow)]"
                 >
                   <svg className="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
@@ -168,8 +168,8 @@ export default function ContactForm() {
 
         {/* Right Column: Contact Details Card */}
         <div className="md:col-span-2 space-y-6 md:pt-16">
-          <div className="clay-card p-6 sm:p-8 rounded-3xl space-y-6">
-            <div className="size-14 rounded-2xl bg-gradient-to-br from-[#6852F6] to-[#5538EA] flex items-center justify-center shadow-[0_10px_24px_rgba(85,56,234,0.35)] text-white">
+          <div className="clay-card p-6 sm:p-8 rounded-3xl space-y-6 bg-[var(--bg-card,#121824)] border border-[var(--border-card,#1E293B)] shadow-2xl">
+            <div className="size-14 rounded-2xl bg-[var(--primary-accent)] flex items-center justify-center shadow-[0_10px_24px_var(--primary-accent-shadow)] text-[var(--primary-accent-text,#0A0E14)] font-bold">
               <svg
                 className="w-7 h-7 translate-x-0.5 -translate-y-0.5"
                 fill="none"
@@ -187,64 +187,64 @@ export default function ContactForm() {
             </div>
 
             <div className="space-y-5">
-              <div className="bg-[#F8F9FE] p-4 rounded-2xl border border-[#EAE9F6]">
+              <div className="bg-[var(--bg-card-subtle,#0F1520)] p-4 rounded-2xl border border-[var(--border-card,#1E293B)]">
                 <p className={labelClass}>Direct Email</p>
                 <a
                   href="mailto:agusmilesi2002@gmail.com"
-                  className="text-base font-bold text-[#18182E] hover:text-[#5E48E8] transition-colors break-all"
+                  className="text-base font-bold text-[var(--text-main,#ffffff)] hover:text-[var(--primary-accent)] transition-colors break-all"
                 >
                   agusmilesi2002@gmail.com
                 </a>
               </div>
 
-              <div className="bg-[#F8F9FE] p-4 rounded-2xl border border-[#EAE9F6]">
+              <div className="bg-[var(--bg-card-subtle,#0F1520)] p-4 rounded-2xl border border-[var(--border-card,#1E293B)]">
                 <p className={labelClass}>LinkedIn</p>
                 <a
                   href="https://www.linkedin.com/in/agustin-milesi-1982281b6/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-base font-bold text-[#18182E] hover:text-[#5E48E8] transition-colors flex items-center justify-between"
+                  className="text-base font-bold text-[var(--text-main,#ffffff)] hover:text-[var(--primary-accent)] transition-colors flex items-center justify-between"
                 >
                   <span>Agustín Milesi</span>
-                  <span className="text-xs text-[#5E48E8]">Connect →</span>
+                  <span className="text-xs text-[var(--primary-accent)] font-semibold">Connect →</span>
                 </a>
               </div>
 
-              <div className="bg-[#F8F9FE] p-4 rounded-2xl border border-[#EAE9F6]">
+              <div className="bg-[var(--bg-card-subtle,#0F1520)] p-4 rounded-2xl border border-[var(--border-card,#1E293B)]">
                 <p className={labelClass}>GitHub</p>
                 <a
                   href="https://github.com/AgustinMilesi"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-base font-bold text-[#18182E] hover:text-[#5E48E8] transition-colors flex items-center justify-between"
+                  className="text-base font-bold text-[var(--text-main,#ffffff)] hover:text-[var(--primary-accent)] transition-colors flex items-center justify-between"
                 >
                   <span>@AgustinMilesi</span>
-                  <span className="text-xs text-[#5E48E8]">Repositories →</span>
+                  <span className="text-xs text-[var(--primary-accent)] font-semibold">Repositories →</span>
                 </a>
               </div>
             </div>
 
             {/* Live Ecosystem Demos */}
-            <div className="pt-4 border-t border-[#EAE9F6] space-y-3">
+            <div className="pt-4 border-t border-[var(--border-card,#1E293B)] space-y-3">
               <p className={labelClass}>Ecosystem Projects</p>
               <div className="flex flex-col gap-2 text-xs">
                 <a
                   href="https://milesi-erp.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between px-3 py-2 rounded-xl bg-white border border-[#EAE9F6] hover:border-[#5E48E8] hover:text-[#5E48E8] font-bold text-[#18182E] transition shadow-xs"
+                  className="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-[var(--bg-card-subtle,#0F1520)] border border-[var(--border-card,#1E293B)] hover:border-[var(--primary-accent)] hover:text-[var(--primary-accent)] font-bold text-[var(--text-main,#ffffff)] transition shadow-xs"
                 >
-                  <span>Milesi ERP & POS</span>
-                  <span className="text-[11px] text-[#72729A]">Live Demo ↗</span>
+                  <span>VOUT Retail (ERP & POS)</span>
+                  <span className="text-[11px] text-[var(--text-muted,#94A3B8)]">Live Demo ↗</span>
                 </a>
                 <a
                   href="https://saas-am.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between px-3 py-2 rounded-xl bg-white border border-[#EAE9F6] hover:border-[#5E48E8] hover:text-[#5E48E8] font-bold text-[#18182E] transition shadow-xs"
+                  className="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-[var(--bg-card-subtle,#0F1520)] border border-[var(--border-card,#1E293B)] hover:border-[var(--primary-accent)] hover:text-[var(--primary-accent)] font-bold text-[var(--text-main,#ffffff)] transition shadow-xs"
                 >
-                  <span>Contact SaaS</span>
-                  <span className="text-[11px] text-[#72729A]">Live Demo ↗</span>
+                  <span>VOUT Inbox (SaaS CRM)</span>
+                  <span className="text-[11px] text-[var(--text-muted,#94A3B8)]">Live Demo ↗</span>
                 </a>
               </div>
             </div>
@@ -256,9 +256,9 @@ export default function ContactForm() {
       </div>
 
       {/* Footer */}
-      <footer className="pt-6 border-t border-[#EAE9F6] flex flex-wrap items-center justify-between gap-4 text-xs text-[#72729A]">
-        <p>© 2026 Agustín Milesi · Full Stack Developer · ERP & SaaS Architect.</p>
-        <span className="font-medium text-[#5E48E8]">Claymorphism Design System</span>
+      <footer className="pt-6 border-t border-[var(--border-card,#1E293B)] flex flex-wrap items-center justify-between gap-4 text-xs text-[var(--text-muted,#94A3B8)]">
+        <p>© 2026 Agustín Milesi · Full Stack Developer · VOUT Ecosystem.</p>
+        <span className="font-semibold text-[var(--primary-accent)]">VOUT Pocket Design System</span>
       </footer>
     </div>
   );
