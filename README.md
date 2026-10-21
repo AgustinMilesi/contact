@@ -1,4 +1,4 @@
-# 📬 Contact Portal & Lead Gateway
+# 📬 VOUT Connect — Contact Portal & Lead Gateway
 
 A modern, lightweight contact page and lead capture gateway. Built with end-to-end schema validation (Zod on both client and server), silent bot mitigation (honeypot), persistent storage in PostgreSQL, and real-time transactional email delivery with Resend.
 
@@ -66,8 +66,8 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-### 🔗 Other Projects
-- [💳 Retail Engine & POS](https://github.com/AgustinMilesi/retail) — Point of sale, atomic stock control, and cash drawer audits.
-- [📥 Customer Inbox SaaS](https://github.com/AgustinMilesi/inbox) — Multi-tenant customer inquiry inbox and embeddable forms.
-- [🌐 OneCargo Logistics](https://github.com/AgustinMilesi/cargo) — International freight forwarding, customs clearance, and container tracking.
-- [📱 PocketExpenses](https://github.com/AgustinMilesi/expenses) — Mobile cost and subscription tracker with React Native & NativeWind.
+### ⚡ The VOUT Software Ecosystem
+- [📱 VOUT Pocket](https://github.com/AgustinMilesi/expenses) — Mobile cost, subscription, and micro-spending tracker with React Native.
+- [💳 VOUT Retail](https://github.com/AgustinMilesi/retail) — Point of sale, atomic stock control, and cash drawer audits.
+- [📥 VOUT Inbox](https://github.com/AgustinMilesi/inbox) — Multi-tenant customer inquiry inbox and embeddable forms.
+- [🚢 VOUT Cargo](https://github.com/AgustinMilesi/cargo) — International freight forwarding, customs clearance, and container tracking.
