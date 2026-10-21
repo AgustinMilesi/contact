@@ -1,14 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
   <defs>
-    <linearGradient id="voutConnectGrad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#121824"/>
-      <stop offset="100%" stop-color="#0A0E14"/>
+    <linearGradient id="voutGreenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C6F827"/>
+      <stop offset="60%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
     </linearGradient>
+    <radialGradient id="voutGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C6F827" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#0A0E14" stop-opacity="0"/>
+    </radialGradient>
   </defs>
-  <!-- Background rounded rectangle -->
-  <rect width="32" height="32" rx="9" fill="url(#voutConnectGrad)" stroke="#1E293B" stroke-width="1"/>
 
-  <!-- VOUT Monogram / Gateway Mark -->
-  <path d="M7 9L13.5 23H18.5L25 9H20.2L16 18.2L11.8 9H7Z" fill="#C6F827"/>
-  <circle cx="16" cy="11" r="2" fill="#C6F827" opacity="0.7"/>
+  <!-- Background squircle in obsidian -->
+  <rect width="32" height="32" rx="9" fill="#0A0E14"/>
+  <rect x="0.5" y="0.5" width="31" height="31" rx="8.5" fill="#121824" stroke="#1E293B" stroke-width="1"/>
+  <rect x="0.5" y="0.5" width="31" height="31" rx="8.5" stroke="#C6F827" stroke-opacity="0.4" stroke-width="1"/>
+
+  <!-- Subtle radial green glow behind mark -->
+  <circle cx="16" cy="16" r="12" fill="url(#voutGlow)"/>
+
+  <!-- Vout Mark: V with small subscript c -->
+  <text x="7" y="22" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="18" fill="url(#voutGreenGrad)" letter-spacing="-1">V</text>
+  <text x="19" y="23" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="11" fill="#C6F827" opacity="0.9">c</text>
 </svg>

@@ -46,8 +46,10 @@ export default function ContactForm() {
       {/* Top Navigation Bar */}
       <header className="flex items-center justify-between pb-4 border-b border-[var(--border-card,#1E293B)]">
         <div className="flex items-center gap-3">
-          <div className="size-10 rounded-2xl bg-[var(--primary-accent)] flex items-center justify-center text-[var(--primary-accent-text,#0A0E14)] font-black text-base shadow-[0_4px_12px_var(--primary-accent-shadow)] transition-transform hover:scale-105">
-            V
+          <div className="size-10 rounded-2xl bg-[#0A0E14] border border-[#1E293B] flex items-center justify-center shadow-[0_0_15px_rgba(198,248,39,0.25)] transition-transform hover:scale-105">
+            <span className="font-black text-xl bg-gradient-to-br from-[#C6F827] via-[#10B981] to-[#00FF88] bg-clip-text text-transparent flex items-baseline leading-none select-none pl-0.5">
+              V<span className="text-[11px] font-black text-[#C6F827] ml-0.5">c</span>
+            </span>
           </div>
           <div>
             <span className="font-black tracking-tight text-base text-[var(--text-main,#ffffff)] block leading-none">
@@ -169,21 +171,10 @@ export default function ContactForm() {
         {/* Right Column: Contact Details Card */}
         <div className="md:col-span-2 space-y-6 md:pt-16">
           <div className="clay-card p-6 sm:p-8 rounded-3xl space-y-6 bg-[var(--bg-card,#121824)] border border-[var(--border-card,#1E293B)] shadow-2xl">
-            <div className="size-14 rounded-2xl bg-[var(--primary-accent)] flex items-center justify-center shadow-[0_10px_24px_var(--primary-accent-shadow)] text-[var(--primary-accent-text,#0A0E14)] font-bold">
-              <svg
-                className="w-7 h-7 translate-x-0.5 -translate-y-0.5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
-                />
-              </svg>
+            <div className="size-14 rounded-2xl bg-[#0A0E14] border border-[#1E293B] flex items-center justify-center shadow-[0_0_20px_rgba(198,248,39,0.3)]">
+              <span className="font-black text-3xl bg-gradient-to-br from-[#C6F827] via-[#10B981] to-[#00FF88] bg-clip-text text-transparent flex items-baseline leading-none select-none pl-1">
+                V<span className="text-base font-black text-[#C6F827] ml-0.5">c</span>
+              </span>
             </div>
 
             <div className="space-y-5">
@@ -245,19 +236,43 @@ export default function ContactForm() {
                   href="https://milesi-erp.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-[var(--bg-card-subtle,#0F1520)] border border-[var(--border-card,#1E293B)] hover:border-[var(--primary-accent)] hover:text-[var(--primary-accent)] font-bold text-[var(--text-main,#ffffff)] transition shadow-xs"
+                  className="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-[var(--bg-card-subtle,#0F1520)] border border-[var(--border-card,#1E293B)] hover:border-[#C6F827]/60 hover:shadow-[0_0_12px_rgba(198,248,39,0.2)] font-bold text-[var(--text-main,#ffffff)] transition group"
                 >
-                  <span>VOUT Retail (ERP & POS)</span>
-                  <span className="text-[11px] text-[var(--text-muted,#94A3B8)]">Live Demo ↗</span>
+                  <span className="flex items-center gap-2.5">
+                    <span className="size-6 rounded-lg bg-[#0A0E14] border border-[#1E293B] flex items-center justify-center text-[11px] font-black leading-none text-[#C6F827]">
+                      V<span className="text-[9px] text-[#10B981]">r</span>
+                    </span>
+                    <span>VOUT Retail (ERP &amp; POS)</span>
+                  </span>
+                  <span className="text-[11px] text-[var(--text-muted,#94A3B8)] group-hover:text-[#C6F827] transition">Live Demo ↗</span>
                 </a>
                 <a
                   href="https://saas-am.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-[var(--bg-card-subtle,#0F1520)] border border-[var(--border-card,#1E293B)] hover:border-[var(--primary-accent)] hover:text-[var(--primary-accent)] font-bold text-[var(--text-main,#ffffff)] transition shadow-xs"
+                  className="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-[var(--bg-card-subtle,#0F1520)] border border-[var(--border-card,#1E293B)] hover:border-[#C6F827]/60 hover:shadow-[0_0_12px_rgba(198,248,39,0.2)] font-bold text-[var(--text-main,#ffffff)] transition group"
                 >
-                  <span>VOUT Inbox (SaaS CRM)</span>
-                  <span className="text-[11px] text-[var(--text-muted,#94A3B8)]">Live Demo ↗</span>
+                  <span className="flex items-center gap-2.5">
+                    <span className="size-6 rounded-lg bg-[#0A0E14] border border-[#1E293B] flex items-center justify-center text-[11px] font-black leading-none text-[#C6F827]">
+                      V<span className="text-[9px] text-[#10B981]">i</span>
+                    </span>
+                    <span>VOUT Inbox (SaaS CRM)</span>
+                  </span>
+                  <span className="text-[11px] text-[var(--text-muted,#94A3B8)] group-hover:text-[#C6F827] transition">Live Demo ↗</span>
+                </a>
+                <a
+                  href="https://sap-logistics.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-[var(--bg-card-subtle,#0F1520)] border border-[var(--border-card,#1E293B)] hover:border-[#C6F827]/60 hover:shadow-[0_0_12px_rgba(198,248,39,0.2)] font-bold text-[var(--text-main,#ffffff)] transition group"
+                >
+                  <span className="flex items-center gap-2.5">
+                    <span className="size-6 rounded-lg bg-[#0A0E14] border border-[#1E293B] flex items-center justify-center text-[11px] font-black leading-none text-[#C6F827]">
+                      V<span className="text-[9px] text-[#10B981]">g</span>
+                    </span>
+                    <span>VOUT Cargo (Global Freight)</span>
+                  </span>
+                  <span className="text-[11px] text-[var(--text-muted,#94A3B8)] group-hover:text-[#C6F827] transition">Live Demo ↗</span>
                 </a>
               </div>
             </div>
