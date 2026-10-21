@@ -478,7 +478,7 @@ export default function ContactForm() {
             Security Policy
           </a>
           <span className="font-bold text-[var(--primary-accent)] font-mono">
-            VOUT Pocket Design System
+            VOUT Design System
           </span>
         </div>
       </footer>

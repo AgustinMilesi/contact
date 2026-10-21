@@ -60,7 +60,7 @@ export default function LegalPage() {
             </div>
             <div className="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed pl-1">
               <p>
-                <strong>1.1. Naturaleza del Servicio:</strong> VOUT comercializa el aprovisionamiento, alojamiento (hosting) de alto rendimiento, mantenimiento preventivo y correctivo, y administración de bases de datos de las aplicaciones del ecosistema (VOUT Retail, VOUT Inbox, VOUT Cargo y VOUT Pocket). No se realiza venta ni cesión del código fuente propietario ni de derechos patrimoniales sobre los desarrollos de software.
+                <strong>1.1. Naturaleza del Servicio:</strong> VOUT comercializa el aprovisionamiento, alojamiento (hosting) de alto rendimiento, mantenimiento preventivo y correctivo, y administración de bases de datos de las aplicaciones del ecosistema (VOUT Retail, VOUT Inbox, VOUT Cargo y VOUT). No se realiza venta ni cesión del código fuente propietario ni de derechos patrimoniales sobre los desarrollos de software.
               </p>
               <p>
                 <strong>1.2. Mantenimiento y Actualizaciones:</strong> La suscripción mensual o anual incluye el despliegue automático de actualizaciones de seguridad, optimizaciones de rendimiento y mejoras continuas de interfaz sin costo de desarrollo adicional.
