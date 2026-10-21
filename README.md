@@ -1,49 +1,54 @@
 <div align="center">
 
 # 📬 VOUT Connect
-### High-Conversion Contact Portal & Anti-Spam Lead Gateway
+### Managed Inbound Gateway, Enterprise Onboarding & Anti-Bot Hub
 
-[![VOUT Ecosystem](https://img.shields.io/badge/VOUT-Ecosystem-C6F827?style=for-the-badge&logoColor=black&labelColor=0A0E14)](https://github.com/AgustinMilesi)
-[![VOUT ID](https://img.shields.io/badge/VOUT_ID-Ecosystem_Pass-C6F827?style=for-the-badge&logo=shield&logoColor=black&labelColor=0A0E14)](https://agustinmilesi-contact.vercel.app)
-[![Live Demo](https://img.shields.io/badge/Live_Demo-agustinmilesi--contact.vercel.app-C6F827?style=for-the-badge&logo=vercel&logoColor=black&labelColor=0A0E14)](https://agustinmilesi-contact.vercel.app)
+[![VOUT Ecosystem](https://img.shields.io/badge/VOUT-Managed_Cloud-C6F827?style=for-the-badge&logoColor=black&labelColor=0A0E14)](https://github.com/AgustinMilesi)
+[![SLA](https://img.shields.io/badge/SLA-99.9%25_Uptime-C6F827?style=for-the-badge&logo=shield&logoColor=black&labelColor=0A0E14)](https://agustinmilesi-contact.vercel.app/legal)
+[![Live Demo](https://img.shields.io/badge/Live_Service-agustinmilesi--contact.vercel.app-C6F827?style=for-the-badge&logo=vercel&logoColor=black&labelColor=0A0E14)](https://agustinmilesi-contact.vercel.app)
+[![Legal Framework](https://img.shields.io/badge/Legal-SLA_%26_Privacy-10B981?style=for-the-badge&logoColor=white&labelColor=0A0E14)](https://agustinmilesi-contact.vercel.app/legal)
+
+<p align="center">
+  <strong>Portal central de contacto, acceso corporativo y canal de enlace para el ecosistema gestionado VOUT.</strong>
+</p>
 
 </div>
 
 ---
 
-## 🎯 Overview
+## 🎯 Modelo de Servicio Administrado (Managed SaaS)
 
-**VOUT Connect** is a minimalist, ultra-secure contact portal and lead capture gateway connecting visitors directly with the VOUT ecosystem.
-- ⚡ **Dual-Layer Validation:** Single source of truth using shared Zod schemas between React Hook Form and Next.js Server Actions (4 automated unit tests).
-- 🛡️ **Silent Bot Defense:** Invisible honeypot traps automated bots without annoying captchas.
-- 📬 **Instant Delivery:** Transactional email dispatch via Resend with visitor `Reply-To` routing.
-- 💾 **Persistent Cloud Storage:** Inquiries logged into serverless PostgreSQL (Neon) via Prisma ORM.
+**VOUT Connect** es la puerta de entrada pública para clientes, prospectos y socios del ecosistema:
+- 🚀 **Zero-DevOps:** Gateway en la nube de alta disponibilidad, protegido contra sobrecargas y ataques de bots.
+- ⚡ **Validación en Doble Capa:** Esquemas Zod unificados entre React Hook Form y Server Actions de Next.js, con 4 tests automáticos de cobertura.
+- 🛡️ **Defensa Anti-Spam Silenciosa:** Trampa de campo honeypot que neutraliza envíos automatizados sin fricción de captchas para humanos.
+- 📬 **Despacho Inmediato de Notificaciones:** Enrutamiento transaccional vía Resend con cabeceras `Reply-To` directas.
+- 💾 **Persistencia Cloud:** Registro seguro en PostgreSQL serverless (Neon) mediante Prisma ORM.
+- 🌐 **Directorio del Ecosistema:** Enlaces en vivo hacia las instancias administradas de VOUT Retail, VOUT Inbox y VOUT Cargo.
 
 ---
 
-## 🛠️ Stack
+## 🛠️ Stack Tecnológico
 
 `Next.js 16` • `React 19` • `TypeScript` • `PostgreSQL Serverless (Neon)` • `Prisma ORM` • `Tailwind CSS v4` • `Zod` • `Resend API`
 
 ---
 
-## 🚀 Quickstart
+## ⚙️ Operación & Mantenimiento Interno
 
 ```bash
-# Clone and enter directory
-git clone https://github.com/AgustinMilesi/contact.git
-cd contact
+# Verificación de compilación y tipado
+npm run typecheck
 
-# Install dependencies & start
-npm install
-npx prisma generate
-npm run dev
+# Suite de pruebas automatizadas (esquema y honeypot)
+npm test
+
+# Sincronización de esquema de datos
+npx prisma db push
 ```
 
 ---
 
-### ⚡ The VOUT Software Ecosystem
-- [📱 VOUT Pocket](https://github.com/AgustinMilesi/expenses) — Mobile cost, subscription & micro-spending tracker.
-- [💳 VOUT Retail](https://github.com/AgustinMilesi/retail) — Cloud point of sale, atomic stock control, and cash drawer audits.
-- [📥 VOUT Inbox](https://github.com/AgustinMilesi/inbox) — Multi-tenant customer feedback & embeddable forms.
-- [🚢 VOUT Cargo](https://github.com/AgustinMilesi/cargo) — Freight forwarding & customs tracking operating system.
+<div align="center">
+  <p>© 2026 VOUT Connect · Managed Cloud Inbound Gateway.</p>
+</div>

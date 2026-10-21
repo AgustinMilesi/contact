@@ -257,8 +257,13 @@ export default function ContactForm() {
 
       {/* Footer */}
       <footer className="pt-6 border-t border-[var(--border-card,#1E293B)] flex flex-wrap items-center justify-between gap-4 text-xs text-[var(--text-muted,#94A3B8)]">
-        <p>© 2026 Agustín Milesi · Full Stack Developer · VOUT Ecosystem.</p>
-        <span className="font-semibold text-[var(--primary-accent)]">VOUT Pocket Design System</span>
+        <p>© {new Date().getFullYear()} Agustín Milesi · VOUT Ecosystem.</p>
+        <div className="flex items-center gap-4">
+          <a href="/legal" className="hover:text-[var(--primary-accent)] transition">
+            Términos &amp; Privacidad
+          </a>
+          <span className="font-semibold text-[var(--primary-accent)]">VOUT Pocket Design System</span>
+        </div>
       </footer>
     </div>
   );
