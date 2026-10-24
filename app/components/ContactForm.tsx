@@ -88,7 +88,7 @@ export default function ContactForm() {
         <div className="flex items-center gap-3.5">
           {/* Official VOUT Vc Monogram - Clean Matte, No Glow */}
           <div className="size-11 rounded-2xl bg-[#121824] border border-[#1E293B] flex items-center justify-center transition-transform hover:scale-105 shrink-0 shadow-sm">
-            <span className="font-bold text-xl text-white flex items-baseline leading-none select-none tracking-tight">
+            <span className="font-bold text-xl text-[#c6f827] flex items-baseline leading-none select-none tracking-tight">
               V<span className="text-[11px] font-semibold text-slate-400 ml-0.5">c</span>
             </span>
           </div>
@@ -130,8 +130,8 @@ export default function ContactForm() {
         {/* Left Column: Thesis Headline and Elevated Form */}
         <div className="md:col-span-3 space-y-6">
           <div className="space-y-1">
-            <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full text-[10px] font-mono uppercase tracking-wider bg-slate-800/60 text-slate-300 border border-slate-700/60 mb-2">
-              <span className="size-1.5 rounded-full bg-emerald-400" />
+            <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full text-[10px] font-mono uppercase tracking-wider bg-[#121824] text-[#c6f827] border border-[#1E293B] mb-2">
+              <span className="size-1.5 rounded-full bg-[#c6f827]" />
               Sovereign Inbound Channel
             </div>
             <h1 className="text-4xl sm:text-5xl leading-tight tracking-tight">
@@ -160,7 +160,7 @@ export default function ContactForm() {
                       onClick={() => handleSelectScope(scope)}
                       className={`text-xs px-3 py-1.5 rounded-xl border transition-all cursor-pointer font-medium ${
                         selectedScope === scope.id
-                          ? "bg-white text-slate-950 font-bold border-white shadow-xs"
+                          ? "bg-[#c6f827] text-[#0a0e14] font-bold border-[#c6f827] shadow-xs"
                           : "bg-[#0A0E14] text-slate-400 border-[#1E293B] hover:border-slate-600 hover:text-white"
                       }`}
                     >
@@ -262,7 +262,7 @@ export default function ContactForm() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full sm:w-auto px-8 py-3.5 bg-white hover:bg-slate-200 text-slate-950 font-bold rounded-2xl text-xs uppercase tracking-wider flex items-center justify-center gap-2.5 select-none cursor-pointer active:scale-95 transition-all disabled:opacity-50 shadow-sm"
+                  className="w-full sm:w-auto px-8 py-3.5 bg-[#c6f827] hover:bg-[#b4e518] text-[#0a0e14] font-bold rounded-2xl text-xs uppercase tracking-wider flex items-center justify-center gap-2.5 select-none cursor-pointer active:scale-95 transition-all disabled:opacity-50 shadow-sm"
                 >
                   {loading ? (
                     <>
@@ -303,7 +303,7 @@ export default function ContactForm() {
               <div className="flex items-center gap-3">
                 {/* Clean Box - Zero Glow */}
                 <div className="size-11 rounded-2xl bg-[#0D121B] border border-[#1E293B] flex items-center justify-center shadow-sm">
-                  <span className="font-bold text-lg text-white flex items-baseline leading-none select-none tracking-tight">
+                  <span className="font-bold text-lg text-[#c6f827] flex items-baseline leading-none select-none tracking-tight">
                     V<span className="text-[11px] font-semibold text-slate-400 ml-0.5">c</span>
                   </span>
                 </div>
@@ -383,7 +383,7 @@ export default function ContactForm() {
                   className="flex items-center justify-between p-3 rounded-2xl bg-[#0D121B] border border-[#1E293B] hover:border-slate-600 font-bold text-white transition group shadow-sm"
                 >
                   <span className="flex items-center gap-2.5">
-                    <span className="size-7 rounded-xl bg-[#182030] border border-[#1E293B] flex items-center justify-center text-[12px] font-bold leading-none text-slate-200">
+                    <span className="size-7 rounded-xl bg-[#182030] border border-[#1E293B] flex items-center justify-center text-[12px] font-bold leading-none text-[#c6f827]">
                       V<span className="text-[10px] text-slate-400">r</span>
                     </span>
                     <div>
@@ -405,7 +405,7 @@ export default function ContactForm() {
                   className="flex items-center justify-between p-3 rounded-2xl bg-[#0D121B] border border-[#1E293B] hover:border-slate-600 font-bold text-white transition group shadow-sm"
                 >
                   <span className="flex items-center gap-2.5">
-                    <span className="size-7 rounded-xl bg-[#182030] border border-[#1E293B] flex items-center justify-center text-[12px] font-bold leading-none text-slate-200">
+                    <span className="size-7 rounded-xl bg-[#182030] border border-[#1E293B] flex items-center justify-center text-[12px] font-bold leading-none text-[#c6f827]">
                       V<span className="text-[10px] text-slate-400">i</span>
                     </span>
                     <div>
@@ -427,7 +427,7 @@ export default function ContactForm() {
                   className="flex items-center justify-between p-3 rounded-2xl bg-[#0D121B] border border-[#1E293B] hover:border-slate-600 font-bold text-white transition group shadow-sm"
                 >
                   <span className="flex items-center gap-2.5">
-                    <span className="size-7 rounded-xl bg-[#182030] border border-[#1E293B] flex items-center justify-center text-[12px] font-bold leading-none text-slate-200">
+                    <span className="size-7 rounded-xl bg-[#182030] border border-[#1E293B] flex items-center justify-center text-[12px] font-bold leading-none text-[#c6f827]">
                       V<span className="text-[10px] text-slate-400">g</span>
                     </span>
                     <div>
@@ -449,7 +449,7 @@ export default function ContactForm() {
                   className="flex items-center justify-between p-3 rounded-2xl bg-[#0D121B] border border-[#1E293B] hover:border-slate-600 font-bold text-white transition group shadow-sm"
                 >
                   <span className="flex items-center gap-2.5">
-                    <span className="size-7 rounded-xl bg-[#182030] border border-[#1E293B] flex items-center justify-center text-[12px] font-black leading-none text-slate-200">
+                    <span className="size-7 rounded-xl bg-[#182030] border border-[#1E293B] flex items-center justify-center text-[12px] font-black leading-none text-[#c6f827]">
                       V<span className="text-[10px] text-slate-400">p</span>
                     </span>
                     <div>

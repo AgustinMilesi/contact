@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  /* Default Clean Accent: Minimalist Refined Emerald/Slate */
-  --primary-accent: #10b981;
-  --primary-accent-hover: #059669;
-  --primary-accent-gradient: #10b981;
+  /* Default Clean Accent: Flagship VOUT Cyber-Lime (Matte, Solid, Zero Glow) */
+  --primary-accent: #c6f827;
+  --primary-accent-hover: #b4e518;
+  --primary-accent-gradient: #c6f827;
   --primary-accent-shadow: transparent;
-  --primary-accent-rgb: 16, 185, 129;
-  --primary-accent-text: #ffffff;
+  --primary-accent-rgb: 198, 248, 39;
+  --primary-accent-text: #0a0e14;
 
   /* Default Canvas: Deep Obsidian Charcoal */
   --bg-page: #0a0e14;
@@ -115,11 +115,12 @@ html, body {
   box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.5);
 }
 
-/* Clean Matte Action Buttons */
+/* Clean Matte Action Buttons (Cyber-Lime, Solid, Zero Glow) */
 .clay-btn {
-  background: #ffffff !important;
-  color: #0a0e14 !important;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) !important;
+  background: var(--primary-accent) !important;
+  color: var(--primary-accent-text) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+  font-weight: 700;
   transition: all 0.15s ease;
 }
 
@@ -128,8 +129,8 @@ html, body {
 }
 
 .clay-btn:hover {
-  background: #e2e8f0 !important;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) !important;
+  background: var(--primary-accent-hover) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4) !important;
 }
 
 .clay-btn:active {

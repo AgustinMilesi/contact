@@ -6,10 +6,10 @@ export type Theme = "emerald" | "jade" | "mint" | "lime";
 export type Mode = "light" | "dark";
 
 export const THEMES: { id: Theme; name: string; colorClass: string; hex: string }[] = [
+  { id: "lime", name: "Cyber Lime", colorClass: "bg-[#c6f827]", hex: "#c6f827" },
   { id: "emerald", name: "Emerald", colorClass: "bg-[#10b981]", hex: "#10b981" },
-  { id: "jade", name: "Forest", colorClass: "bg-[#059669]", hex: "#059669" },
   { id: "mint", name: "Mint", colorClass: "bg-[#14b8a6]", hex: "#14b8a6" },
-  { id: "lime", name: "Olive Lime", colorClass: "bg-[#84cc16]", hex: "#84cc16" },
+  { id: "jade", name: "Forest", colorClass: "bg-[#059669]", hex: "#059669" },
 ];
 
 type PreferencesContextType = {
@@ -36,7 +36,7 @@ export function PreferencesProvider({ children }: { children: React.ReactNode })
       const saved = localStorage.getItem("contact-theme") as Theme | null;
       if (saved && THEMES.some((t) => t.id === saved)) return saved;
     }
-    return "emerald";
+    return "lime";
   });
 
   useEffect(() => {
