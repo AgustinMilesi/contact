@@ -489,7 +489,7 @@ export default function ContactForm() {
       {/* 3. Confident & Clean Footer */}
       <footer className="pt-6 border-t border-[var(--border-card,#1E293B)] flex flex-wrap items-center justify-between gap-4 text-xs text-[var(--text-muted,#94A3B8)]">
         <div className="flex items-center gap-2 font-mono text-[11px]">
-          <span>© {new Date().getFullYear()} Agustín Milesi.</span>
+          <span>© 2026 Agustín Milesi.</span>
           <span className="text-slate-600">·</span>
           <span>VOUT Software Ecosystem.</span>
           <span className="text-slate-600">·</span>

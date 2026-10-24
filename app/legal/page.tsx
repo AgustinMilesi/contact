@@ -155,7 +155,7 @@ export default function LegalPage() {
 
         {/* Footer */}
         <footer className="pt-8 pb-12 border-t border-[#1E293B] flex flex-wrap items-center justify-between gap-4 text-xs text-slate-400">
-          <p>© {new Date().getFullYear()} VOUT Ecosystem · Infraestructura Administrada en la Nube.</p>
+          <p>© 2026 VOUT Ecosystem · Infraestructura Administrada en la Nube.</p>
           <div className="flex items-center gap-4">
             <Link href="/" className="hover:text-[var(--primary-accent)] transition">
               Inicio
