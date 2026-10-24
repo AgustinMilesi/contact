@@ -130,7 +130,7 @@ export function PreferencesControls() {
                     onClick={() => setTheme(item.id)}
                     className={`size-6 rounded-full transition-all cursor-pointer ${item.colorClass} ${
                       theme === item.id
-                        ? "scale-125 ring-2 ring-offset-2 ring-[var(--primary-accent)] ring-offset-[var(--bg-card,#121824)] shadow-sm"
+                        ? "scale-125 ring-2 ring-offset-2 ring-slate-400 ring-offset-[#121824] shadow-sm"
                         : "opacity-60 hover:opacity-100 hover:scale-110"
                     }`}
                     title={item.name}

@@ -2,14 +2,14 @@
 
 import { createContext, useContext, useEffect, useState } from "react";
 
-export type Theme = "lime" | "mint" | "emerald" | "jade";
+export type Theme = "emerald" | "jade" | "mint" | "lime";
 export type Mode = "light" | "dark";
 
 export const THEMES: { id: Theme; name: string; colorClass: string; hex: string }[] = [
-  { id: "lime", name: "Cyber Lime", colorClass: "bg-[#c6f827]", hex: "#c6f827" },
-  { id: "mint", name: "Electric Mint", colorClass: "bg-[#00ff88]", hex: "#00ff88" },
-  { id: "emerald", name: "Neon Emerald", colorClass: "bg-[#10b981]", hex: "#10b981" },
-  { id: "jade", name: "Forest Jade", colorClass: "bg-[#059669]", hex: "#059669" },
+  { id: "emerald", name: "Emerald", colorClass: "bg-[#10b981]", hex: "#10b981" },
+  { id: "jade", name: "Forest", colorClass: "bg-[#059669]", hex: "#059669" },
+  { id: "mint", name: "Mint", colorClass: "bg-[#14b8a6]", hex: "#14b8a6" },
+  { id: "lime", name: "Olive Lime", colorClass: "bg-[#84cc16]", hex: "#84cc16" },
 ];
 
 type PreferencesContextType = {
@@ -36,7 +36,7 @@ export function PreferencesProvider({ children }: { children: React.ReactNode })
       const saved = localStorage.getItem("contact-theme") as Theme | null;
       if (saved && THEMES.some((t) => t.id === saved)) return saved;
     }
-    return "lime";
+    return "emerald";
   });
 
   useEffect(() => {

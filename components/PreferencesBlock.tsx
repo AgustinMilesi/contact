@@ -78,7 +78,7 @@ export function PreferencesBlock({ compact = false }: { compact?: boolean }) {
                 onClick={() => setTheme(item.id)}
                 className={`size-7 rounded-full transition-all cursor-pointer ${item.colorClass} ${
                   theme === item.id
-                    ? "scale-115 ring-2 ring-offset-2 ring-[var(--primary-accent)] ring-offset-[var(--bg-card,#121824)] shadow-md"
+                    ? "scale-115 ring-2 ring-offset-2 ring-slate-400 ring-offset-[#121824] shadow-sm"
                     : "opacity-60 hover:opacity-100 hover:scale-105"
                 }`}
                 title={item.name}

@@ -13,11 +13,11 @@ export default function LegalPage() {
         {/* Navigation Header */}
         <header className="flex items-center justify-between pb-6 border-b border-[#1E293B]">
           <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="size-9 rounded-2xl bg-[var(--primary-accent)] text-[var(--primary-accent-text)] flex items-center justify-center font-black text-sm shadow-[var(--primary-accent-shadow)] transition-transform group-hover:scale-105">
+            <div className="size-9 rounded-2xl bg-[#121824] border border-[#1E293B] text-white flex items-center justify-center font-bold text-sm shadow-sm transition-transform group-hover:scale-105">
               V
             </div>
             <div>
-              <span className="font-black text-white text-base block leading-none">VOUT</span>
+              <span className="font-bold text-white text-base block leading-none">VOUT</span>
               <span className="text-[11px] text-slate-400 font-medium">Centro Legal &amp; Contratos Cloud</span>
             </div>
           </Link>
@@ -25,7 +25,7 @@ export default function LegalPage() {
             <PreferencesControls />
             <Link
               href="/"
-              className="text-xs font-bold text-[var(--primary-accent)] hover:underline underline-offset-4"
+              className="text-xs font-medium text-slate-300 hover:text-white hover:underline underline-offset-4"
             >
               ← Volver al inicio
             </Link>

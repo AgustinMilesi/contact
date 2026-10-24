@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  /* Default Theme: VOUT Cyber-Lime */
-  --primary-accent: #c6f827;
-  --primary-accent-hover: #b4e518;
-  --primary-accent-gradient: linear-gradient(135deg, #c6f827 0%, #a3d915 100%);
-  --primary-accent-shadow: rgba(198, 248, 39, 0.35);
-  --primary-accent-rgb: 198, 248, 39;
-  --primary-accent-text: #0a0e14;
+  /* Default Clean Accent: Minimalist Refined Emerald/Slate */
+  --primary-accent: #10b981;
+  --primary-accent-hover: #059669;
+  --primary-accent-gradient: #10b981;
+  --primary-accent-shadow: transparent;
+  --primary-accent-rgb: 16, 185, 129;
+  --primary-accent-text: #ffffff;
 
   /* Default Canvas: Deep Obsidian Charcoal */
   --bg-page: #0a0e14;
   --bg-card: #121824;
-  --bg-card-subtle: #182030;
+  --bg-card-subtle: #161e2e;
   --bg-hover: #1e293b;
   --text-main: #ffffff;
   --text-muted: #94a3b8;
@@ -28,7 +28,7 @@
   color-scheme: dark;
   --bg-page: #0a0e14;
   --bg-card: #121824;
-  --bg-card-subtle: #182030;
+  --bg-card-subtle: #161e2e;
   --bg-hover: #1e293b;
   --text-main: #ffffff;
   --text-muted: #94a3b8;
@@ -37,56 +37,56 @@
 }
 
 /* ==============================================================================
-   Color Themes (Palettes)
+   Color Themes (Palettes - Clean, Matte, Zero Glow)
    ============================================================================== */
 [data-theme="lime"] {
   --primary-accent: #c6f827;
   --primary-accent-hover: #b4e518;
-  --primary-accent-gradient: linear-gradient(135deg, #c6f827 0%, #10b981 100%);
-  --primary-accent-shadow: rgba(198, 248, 39, 0.35);
+  --primary-accent-gradient: #c6f827;
+  --primary-accent-shadow: transparent;
   --primary-accent-rgb: 198, 248, 39;
   --primary-accent-text: #0a0e14;
 }
 
 [data-theme="mint"] {
-  --primary-accent: #00ff88;
-  --primary-accent-hover: #00e57a;
-  --primary-accent-gradient: linear-gradient(135deg, #00ff88 0%, #10b981 100%);
-  --primary-accent-shadow: rgba(0, 255, 136, 0.35);
-  --primary-accent-rgb: 0, 255, 136;
-  --primary-accent-text: #0a0e14;
+  --primary-accent: #10b981;
+  --primary-accent-hover: #059669;
+  --primary-accent-gradient: #10b981;
+  --primary-accent-shadow: transparent;
+  --primary-accent-rgb: 16, 185, 129;
+  --primary-accent-text: #ffffff;
 }
 
 [data-theme="emerald"] {
   --primary-accent: #10b981;
   --primary-accent-hover: #059669;
-  --primary-accent-gradient: linear-gradient(135deg, #34d399 0%, #059669 100%);
-  --primary-accent-shadow: rgba(16, 185, 129, 0.35);
+  --primary-accent-gradient: #10b981;
+  --primary-accent-shadow: transparent;
   --primary-accent-rgb: 16, 185, 129;
-  --primary-accent-text: #0a0e14;
+  --primary-accent-text: #ffffff;
 }
 
 [data-theme="jade"] {
   --primary-accent: #059669;
   --primary-accent-hover: #047857;
-  --primary-accent-gradient: linear-gradient(135deg, #10b981 0%, #047857 100%);
-  --primary-accent-shadow: rgba(5, 150, 105, 0.35);
+  --primary-accent-gradient: #059669;
+  --primary-accent-shadow: transparent;
   --primary-accent-rgb: 5, 150, 105;
   --primary-accent-text: #ffffff;
 }
 
-/* Fallback Protection: Redirect any legacy theme keys to Cyber-Lime */
+/* Fallback Protection */
 [data-theme="violet"],
 [data-theme="indigo"],
 [data-theme="rose"],
 [data-theme="amber"],
 [data-theme="cyan"] {
-  --primary-accent: #c6f827;
-  --primary-accent-hover: #b4e518;
-  --primary-accent-gradient: linear-gradient(135deg, #c6f827 0%, #10b981 100%);
-  --primary-accent-shadow: rgba(198, 248, 39, 0.35);
-  --primary-accent-rgb: 198, 248, 39;
-  --primary-accent-text: #0a0e14;
+  --primary-accent: #10b981;
+  --primary-accent-hover: #059669;
+  --primary-accent-gradient: #10b981;
+  --primary-accent-shadow: transparent;
+  --primary-accent-rgb: 16, 185, 129;
+  --primary-accent-text: #ffffff;
 }
 
 /* ==============================================================================
@@ -101,27 +101,26 @@ html, body {
   transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-/* Solid Obsidian Surfaces (VOUT Pocket Style) */
+/* Solid Obsidian Surfaces */
 .clay-card {
   background-color: var(--bg-card);
   border-radius: 1.5rem;
   border: 1px solid var(--border-card);
-  box-shadow: 0 10px 30px -8px rgba(0, 0, 0, 0.45);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease;
 }
 
 .clay-card:hover {
-  border-color: rgba(var(--primary-accent-rgb), 0.35);
-  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.6);
-  transform: translateY(-1px);
+  border-color: #334155;
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.5);
 }
 
-/* VOUT Action Buttons */
+/* Clean Matte Action Buttons */
 .clay-btn {
-  background: var(--primary-accent) !important;
-  color: var(--primary-accent-text, #0a0e14) !important;
-  box-shadow: 0 10px 24px -4px var(--primary-accent-shadow);
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  background: #ffffff !important;
+  color: #0a0e14 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) !important;
+  transition: all 0.15s ease;
 }
 
 .clay-btn * {
@@ -129,8 +128,8 @@ html, body {
 }
 
 .clay-btn:hover {
-  box-shadow: 0 14px 30px -4px var(--primary-accent-shadow);
-  transform: translateY(-1px);
+  background: #e2e8f0 !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) !important;
 }
 
 .clay-btn:active {
@@ -151,69 +150,6 @@ html, body {
 
 .animate-smooth-in {
   animation: smooth-lift 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-/* Dynamic Color Theme Utility Mappings */
-.bg-\[\#5E48E8\],
-.bg-\[\#5e48e8\],
-.bg-\[\#6852F6\],
-.bg-\[\#6852f6\],
-.bg-\[\#5538EA\],
-.bg-\[\#5538ea\] {
-  background-color: var(--primary-accent) !important;
-}
-
-.hover\:bg-\[\#5E48E8\]:hover,
-.hover\:bg-\[\#4F38D8\]:hover,
-.hover\:bg-\[\#4a2fe0\]:hover {
-  background-color: var(--primary-accent-hover) !important;
-}
-
-.text-\[\#5E48E8\],
-.text-\[\#5e48e8\],
-.text-\[\#6852F6\],
-.text-\[\#6852f6\],
-.text-\[\#5538EA\],
-.text-\[\#5538ea\] {
-  color: var(--primary-accent) !important;
-}
-
-.hover\:text-\[\#5E48E8\]:hover,
-.hover\:text-\[\#4F38D8\]:hover,
-.hover\:text-\[\#4a2fe0\]:hover {
-  color: var(--primary-accent-hover) !important;
-}
-
-.border-\[\#5E48E8\],
-.border-\[\#5e48e8\],
-.focus\:border-\[\#5E48E8\]:focus {
-  border-color: var(--primary-accent) !important;
-}
-
-.ring-\[\#5E48E8\],
-.focus\:ring-\[\#5E48E8\]\/15:focus,
-.focus\:ring-\[\#5E48E8\]\/20:focus {
-  --tw-ring-color: rgba(var(--primary-accent-rgb), 0.2) !important;
-}
-
-/* Legacy theme bridging */
-.bg-rose-400 {
-  background-color: var(--primary-accent) !important;
-  color: var(--primary-accent-text, #0a0e14) !important;
-}
-.hover\:bg-rose-500:hover {
-  background-color: var(--primary-accent-hover) !important;
-}
-.text-rose-400 {
-  color: var(--primary-accent) !important;
-}
-.hover\:text-rose-400:hover {
-  color: var(--primary-accent-hover) !important;
-}
-.border-rose-400,
-.focus\:border-rose-400:focus,
-.hover\:border-rose-400:hover {
-  border-color: var(--primary-accent) !important;
 }
 
 /* Canvas Adaptations */
@@ -279,10 +215,6 @@ html, body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #c8cbdc;
-  border-radius: 9999px;
-}
-[data-mode="dark"] ::-webkit-scrollbar-thumb,
-.dark ::-webkit-scrollbar-thumb {
   background: #2c3248;
+  border-radius: 9999px;
 }
