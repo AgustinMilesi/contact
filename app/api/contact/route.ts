@@ -13,6 +13,19 @@ const MAX_REQUESTS = 5;
 
 function isRateLimited(ip: string): boolean {
   const now = Date.now();
+
+  // Periodic pruning of stale IPs to prevent memory leak
+  if (ipRateLimits.size > 200) {
+    for (const [k, ts] of ipRateLimits.entries()) {
+      const active = ts.filter((t) => now - t < WINDOW_MS);
+      if (active.length === 0) {
+        ipRateLimits.delete(k);
+      } else {
+        ipRateLimits.set(k, active);
+      }
+    }
+  }
+
   const timestamps = ipRateLimits.get(ip) || [];
   const validTimestamps = timestamps.filter((t) => now - t < WINDOW_MS);
 

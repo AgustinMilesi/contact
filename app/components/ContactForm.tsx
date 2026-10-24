@@ -11,6 +11,7 @@ import { PreferencesBlock } from "@/components/PreferencesBlock";
 const INQUIRY_SCOPES = [
   { id: "enterprise", label: "⚡ Enterprise Cloud", preset: "Enterprise Deployment & Custom Cloud Setup" },
   { id: "retail", label: "🛒 VOUT Retail (ERP)", preset: "VOUT Retail & Point of Sale Integration" },
+  { id: "vout", label: "📱 VOUT Mobile & Web", preset: "VOUT Personal Finance & Cloud Sync Architecture" },
   { id: "inbox", label: "📬 VOUT Inbox (CRM)", preset: "VOUT Inbox & Unified Inbound Pipeline" },
   { id: "cargo", label: "🚢 VOUT Cargo (Freight)", preset: "VOUT Cargo & Customs Automation" },
   { id: "security", label: "🔐 Security & SLA", preset: "Dedicated Instance & Security Architecture" },
@@ -94,14 +95,18 @@ export default function ContactForm() {
           <div>
             <div className="flex items-center gap-2">
               <span className="font-black tracking-tight text-lg text-[var(--text-main,#ffffff)] block leading-none">
-                VOUT Connect
+                Agustín Milesi
+              </span>
+              <span className="text-slate-600 text-xs font-mono">/</span>
+              <span className="font-bold tracking-tight text-sm text-[var(--primary-accent)] block leading-none">
+                VOUT Gateway
               </span>
               <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#121824] border border-[#1E293B] text-[var(--primary-accent)] font-bold">
-                GATEWAY v1.0.1
+                v1.0.1
               </span>
             </div>
             <span className="text-xs text-[var(--text-muted,#94A3B8)] font-medium">
-              Enterprise Inbound Gateway &amp; Sovereign Cloud Architecture
+              Full Stack &amp; Mobile Software Architect · Creator of VOUT Ecosystem
             </span>
           </div>
         </div>
@@ -421,7 +426,7 @@ export default function ContactForm() {
 
                 {/* Node 3: VOUT Cargo */}
                 <a
-                  href="https://sap-logistics.vercel.app"
+                  href="https://cargo-am.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-between p-3 rounded-2xl bg-[var(--bg-card-subtle,#0A0E14)] border border-[var(--border-card,#1E293B)] hover:border-[#C6F827]/60 hover:shadow-[0_0_15px_rgba(198,248,39,0.2)] font-bold text-[var(--text-main,#ffffff)] transition group"
@@ -437,6 +442,28 @@ export default function ContactForm() {
                   </span>
                   <div className="flex items-center gap-2">
                     <span className="text-[10px] font-mono text-slate-500">~16ms</span>
+                    <span className="text-[11px] text-[var(--primary-accent)] group-hover:translate-x-0.5 transition-transform">↗</span>
+                  </div>
+                </a>
+
+                {/* Node 4: VOUT Web & Mobile */}
+                <a
+                  href="https://vout-web.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between p-3 rounded-2xl bg-[var(--bg-card-subtle,#0A0E14)] border border-[var(--border-card,#1E293B)] hover:border-[#C6F827]/60 hover:shadow-[0_0_15px_rgba(198,248,39,0.2)] font-bold text-[var(--text-main,#ffffff)] transition group"
+                >
+                  <span className="flex items-center gap-2.5">
+                    <span className="size-7 rounded-xl bg-[#121824] border border-[#1E293B] flex items-center justify-center text-[12px] font-black leading-none text-[#C6F827]">
+                      V<span className="text-[10px] text-[#10B981]">p</span>
+                    </span>
+                    <div>
+                      <span className="block leading-none">VOUT Web &amp; Mobile</span>
+                      <span className="text-[10px] text-[var(--text-muted,#64748B)] font-normal">Personal Finance Cloud Sync</span>
+                    </div>
+                  </span>
+                  <div className="flex items-center gap-2">
+                    <span className="text-[10px] font-mono text-slate-500">~9ms</span>
                     <span className="text-[11px] text-[var(--primary-accent)] group-hover:translate-x-0.5 transition-transform">↗</span>
                   </div>
                 </a>
@@ -466,9 +493,18 @@ export default function ContactForm() {
       {/* 3. Confident & Clean Footer */}
       <footer className="pt-6 border-t border-[var(--border-card,#1E293B)] flex flex-wrap items-center justify-between gap-4 text-xs text-[var(--text-muted,#94A3B8)]">
         <div className="flex items-center gap-2 font-mono text-[11px]">
-          <span>© {new Date().getFullYear()} VOUT Ecosystem.</span>
+          <span>© {new Date().getFullYear()} Agustín Milesi.</span>
           <span className="text-slate-600">·</span>
-          <span>Autonomous Cloud &amp; Commerce Architecture.</span>
+          <span>VOUT Software Ecosystem.</span>
+          <span className="text-slate-600">·</span>
+          <a
+            href="https://github.com/AgustinMilesi"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--primary-accent)] hover:underline font-bold"
+          >
+            github.com/AgustinMilesi ↗
+          </a>
         </div>
         <div className="flex items-center gap-5 text-[11px]">
           <a href="/legal" className="hover:text-[var(--primary-accent)] transition font-mono">
