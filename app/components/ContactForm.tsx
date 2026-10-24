@@ -134,14 +134,10 @@ export default function ContactForm() {
               <span className="size-1.5 rounded-full bg-[var(--primary-accent)]" />
               Sovereign Inbound Channel
             </div>
-            <h1 className="text-4xl sm:text-5xl font-light text-[var(--text-muted,#94A3B8)] leading-tight tracking-tight">
-              Engineered for
-            </h1>
-            <h1 className="text-4xl sm:text-5xl font-black text-[var(--text-main,#ffffff)] leading-tight tracking-tight">
-              Autonomous
-            </h1>
-            <h1 className="text-4xl sm:text-5xl font-black text-[var(--primary-accent)] leading-tight tracking-tight">
-              Digital Commerce.
+            <h1 className="text-4xl sm:text-5xl leading-tight tracking-tight">
+              <span className="block font-light text-[var(--text-muted,#94A3B8)]">Engineered for</span>
+              <span className="block font-black text-[var(--text-main,#ffffff)]">Autonomous</span>
+              <span className="block font-black text-[var(--primary-accent)]">Digital Commerce.</span>
             </h1>
             <p className="text-xs sm:text-sm text-[var(--text-muted,#94A3B8)] pt-2 max-w-xl font-normal leading-relaxed">
               Deploy managed cloud instances, integrate POS retail hardware, connect freight pipelines, or request custom architecture audits directly through the VOUT Gateway.

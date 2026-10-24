@@ -1,0 +1,24 @@
+# VOUT Connect — Sovereign Cloud & Architecture Gateway
+> Official developer gateway for Agustín Milesi and the VOUT Software Ecosystem.
+
+## Creator
+- Name: Agustín Milesi
+- Title: Lead Full Stack & Mobile Software Architect
+- GitHub: https://github.com/AgustinMilesi
+- Contact Portal: https://agustinmilesi-contact.vercel.app
+
+## Software Ecosystem Nodes
+- VOUT Retail (POS / ERP): https://milesi-erp.vercel.app
+  Point of Sale with barcode scanning, blind drawer reconciliation, thermal printing.
+- VOUT Web & Mobile (Personal Finance): https://vout-web.vercel.app
+  Multi-currency tracker with bi-directional Neon PostgreSQL sync and offline-first mobile app.
+- VOUT Inbox (CRM / Feedback SaaS): https://saas-am.vercel.app
+  Multi-tenant customer communication pipeline with HMAC-signed webhooks.
+- VOUT Cargo (Logistics OS): https://cargo-am.vercel.app
+  Freight forwarding and customs clearance platform with container BL tracking.
+
+## Technical Standards
+- Next.js 16 + React 19 + Turbopack + Tailwind CSS v4
+- React Native + Expo SDK 58
+- PostgreSQL on Neon Serverless with Prisma ORM
+- TLS 1.3 encrypted endpoints with sliding-window DDoS rate limiting
