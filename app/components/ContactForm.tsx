@@ -85,11 +85,17 @@ export default function ContactForm() {
       {/* 1. Header Superior */}
       <header className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-[#1E293B]">
         <div className="flex items-center gap-3">
-          {/* Official VOUT Vc Monogram - Clean Matte, Zero Glow */}
-          <div className="size-10 sm:size-11 rounded-2xl bg-[#121824] border border-[#1E293B] flex items-center justify-center transition-transform hover:scale-105 shrink-0 shadow-sm">
-            <span className="font-bold text-xl text-[#c6f827] flex items-baseline leading-none select-none tracking-tight">
-              V<span className="text-[11px] font-semibold text-slate-400 ml-0.5">c</span>
-            </span>
+          {/* Official VOUT 7-Block Isotipo - Clean Matte, Zero Glow */}
+          <div className="size-10 sm:size-11 rounded-2xl bg-[#121824] border border-[#1E293B] flex items-center justify-center transition-transform hover:scale-105 shrink-0 shadow-sm p-2">
+            <svg viewBox="68 106 416 310" className="w-full h-full" fill="none">
+              <rect x="68" y="228" width="60" height="60" rx="6" fill="#E9E7E0" />
+              <rect x="132" y="292" width="60" height="60" rx="6" fill="#E9E7E0" />
+              <rect x="196" y="356" width="60" height="60" rx="6" fill="#E9E7E0" />
+              <rect x="260" y="292" width="60" height="60" rx="6" fill="#E9E7E0" />
+              <rect x="324" y="228" width="60" height="60" rx="6" fill="#C6F827" />
+              <rect x="390" y="166" width="46" height="46" rx="5" fill="#C6F827" />
+              <rect x="452" y="106" width="32" height="32" rx="4" fill="#C6F827" />
+            </svg>
           </div>
           <div>
             <div className="flex items-center gap-2">
@@ -97,15 +103,15 @@ export default function ContactForm() {
                 Agustín Milesi
               </span>
               <span className="text-slate-600 text-xs font-mono">/</span>
-              <span className="font-medium tracking-tight text-xs sm:text-sm text-slate-300 block leading-none">
-                VOUT Gateway
+              <span className="font-mono text-xs text-[#C6F827] px-2 py-0.5 rounded-full bg-[#121824] border border-[#1E293B] font-medium">
+                vout/connect
               </span>
               <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#121824] border border-[#1E293B] text-slate-400 font-medium">
                 v1.0.1
               </span>
             </div>
             <span className="text-[11px] sm:text-xs text-slate-400 font-normal">
-              Full Stack &amp; Mobile Software Architect · Creator of VOUT Ecosystem
+              Full Stack &amp; Mobile Software Architect · Creador del Ecosistema VOUT
             </span>
           </div>
         </div>
