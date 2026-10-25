@@ -231,13 +231,21 @@ export default function ContactForm() {
                   href="https://milesi-erp.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between p-2.5 rounded-2xl bg-[#0D121B] border border-[#1E293B] hover:border-slate-500 font-bold text-white transition group shadow-sm"
+                  className="flex items-center justify-between p-2.5 rounded-2xl bg-[#0D121B] border border-[#1E293B] hover:border-[#C6F827]/60 font-bold text-white transition group shadow-sm"
                 >
                   <span className="flex items-center gap-2 min-w-0">
-                    <span className="size-6 rounded-lg bg-[#182030] border border-[#1E293B] flex items-center justify-center text-[10px] font-bold text-[#c6f827] shrink-0">
-                      Vr
+                    <span className="size-6 rounded-lg bg-[#121824] border border-[#1E293B] flex items-center justify-center p-1 shrink-0">
+                      <svg viewBox="68 106 416 310" className="w-full h-full" fill="none">
+                        <rect x="68" y="228" width="60" height="60" rx="6" fill="#E9E7E0" />
+                        <rect x="132" y="292" width="60" height="60" rx="6" fill="#E9E7E0" />
+                        <rect x="196" y="356" width="60" height="60" rx="6" fill="#E9E7E0" />
+                        <rect x="260" y="292" width="60" height="60" rx="6" fill="#E9E7E0" />
+                        <rect x="324" y="228" width="60" height="60" rx="6" fill="#C6F827" />
+                        <rect x="390" y="166" width="46" height="46" rx="5" fill="#C6F827" />
+                        <rect x="452" y="106" width="32" height="32" rx="4" fill="#C6F827" />
+                      </svg>
                     </span>
-                    <span className="text-[11px] truncate leading-tight">VOUT Retail</span>
+                    <span className="text-[11px] font-mono text-[#E9E7E0] group-hover:text-[#C6F827] truncate leading-tight">vout/retail</span>
                   </span>
                   <span className="text-[9px] font-mono text-slate-500 shrink-0">~11ms</span>
                 </a>
@@ -247,13 +255,21 @@ export default function ContactForm() {
                   href="https://saas-am.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between p-2.5 rounded-2xl bg-[#0D121B] border border-[#1E293B] hover:border-slate-500 font-bold text-white transition group shadow-sm"
+                  className="flex items-center justify-between p-2.5 rounded-2xl bg-[#0D121B] border border-[#1E293B] hover:border-[#C6F827]/60 font-bold text-white transition group shadow-sm"
                 >
                   <span className="flex items-center gap-2 min-w-0">
-                    <span className="size-6 rounded-lg bg-[#182030] border border-[#1E293B] flex items-center justify-center text-[10px] font-bold text-[#c6f827] shrink-0">
-                      Vi
+                    <span className="size-6 rounded-lg bg-[#121824] border border-[#1E293B] flex items-center justify-center p-1 shrink-0">
+                      <svg viewBox="68 106 416 310" className="w-full h-full" fill="none">
+                        <rect x="68" y="228" width="60" height="60" rx="6" fill="#E9E7E0" />
+                        <rect x="132" y="292" width="60" height="60" rx="6" fill="#E9E7E0" />
+                        <rect x="196" y="356" width="60" height="60" rx="6" fill="#E9E7E0" />
+                        <rect x="260" y="292" width="60" height="60" rx="6" fill="#E9E7E0" />
+                        <rect x="324" y="228" width="60" height="60" rx="6" fill="#C6F827" />
+                        <rect x="390" y="166" width="46" height="46" rx="5" fill="#C6F827" />
+                        <rect x="452" y="106" width="32" height="32" rx="4" fill="#C6F827" />
+                      </svg>
                     </span>
-                    <span className="text-[11px] truncate leading-tight">VOUT Inbox</span>
+                    <span className="text-[11px] font-mono text-[#E9E7E0] group-hover:text-[#C6F827] truncate leading-tight">vout/inbox</span>
                   </span>
                   <span className="text-[9px] font-mono text-slate-500 shrink-0">~14ms</span>
                 </a>
@@ -263,29 +279,45 @@ export default function ContactForm() {
                   href="https://cargo-am.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between p-2.5 rounded-2xl bg-[#0D121B] border border-[#1E293B] hover:border-slate-500 font-bold text-white transition group shadow-sm"
+                  className="flex items-center justify-between p-2.5 rounded-2xl bg-[#0D121B] border border-[#1E293B] hover:border-[#C6F827]/60 font-bold text-white transition group shadow-sm"
                 >
                   <span className="flex items-center gap-2 min-w-0">
-                    <span className="size-6 rounded-lg bg-[#182030] border border-[#1E293B] flex items-center justify-center text-[10px] font-bold text-[#c6f827] shrink-0">
-                      Vg
+                    <span className="size-6 rounded-lg bg-[#121824] border border-[#1E293B] flex items-center justify-center p-1 shrink-0">
+                      <svg viewBox="68 106 416 310" className="w-full h-full" fill="none">
+                        <rect x="68" y="228" width="60" height="60" rx="6" fill="#E9E7E0" />
+                        <rect x="132" y="292" width="60" height="60" rx="6" fill="#E9E7E0" />
+                        <rect x="196" y="356" width="60" height="60" rx="6" fill="#E9E7E0" />
+                        <rect x="260" y="292" width="60" height="60" rx="6" fill="#E9E7E0" />
+                        <rect x="324" y="228" width="60" height="60" rx="6" fill="#C6F827" />
+                        <rect x="390" y="166" width="46" height="46" rx="5" fill="#C6F827" />
+                        <rect x="452" y="106" width="32" height="32" rx="4" fill="#C6F827" />
+                      </svg>
                     </span>
-                    <span className="text-[11px] truncate leading-tight">VOUT Cargo</span>
+                    <span className="text-[11px] font-mono text-[#E9E7E0] group-hover:text-[#C6F827] truncate leading-tight">vout/cargo</span>
                   </span>
                   <span className="text-[9px] font-mono text-slate-500 shrink-0">~16ms</span>
                 </a>
 
-                {/* Node 4: VOUT Web */}
+                {/* Node 4: VOUT Pocket */}
                 <a
                   href="https://vout-web.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between p-2.5 rounded-2xl bg-[#0D121B] border border-[#1E293B] hover:border-slate-500 font-bold text-white transition group shadow-sm"
+                  className="flex items-center justify-between p-2.5 rounded-2xl bg-[#0D121B] border border-[#1E293B] hover:border-[#C6F827]/60 font-bold text-white transition group shadow-sm"
                 >
                   <span className="flex items-center gap-2 min-w-0">
-                    <span className="size-6 rounded-lg bg-[#182030] border border-[#1E293B] flex items-center justify-center text-[10px] font-bold text-[#c6f827] shrink-0">
-                      Vp
+                    <span className="size-6 rounded-lg bg-[#121824] border border-[#1E293B] flex items-center justify-center p-1 shrink-0">
+                      <svg viewBox="68 106 416 310" className="w-full h-full" fill="none">
+                        <rect x="68" y="228" width="60" height="60" rx="6" fill="#E9E7E0" />
+                        <rect x="132" y="292" width="60" height="60" rx="6" fill="#E9E7E0" />
+                        <rect x="196" y="356" width="60" height="60" rx="6" fill="#E9E7E0" />
+                        <rect x="260" y="292" width="60" height="60" rx="6" fill="#E9E7E0" />
+                        <rect x="324" y="228" width="60" height="60" rx="6" fill="#C6F827" />
+                        <rect x="390" y="166" width="46" height="46" rx="5" fill="#C6F827" />
+                        <rect x="452" y="106" width="32" height="32" rx="4" fill="#C6F827" />
+                      </svg>
                     </span>
-                    <span className="text-[11px] truncate leading-tight">VOUT Web</span>
+                    <span className="text-[11px] font-mono text-[#E9E7E0] group-hover:text-[#C6F827] truncate leading-tight">vout/pocket</span>
                   </span>
                   <span className="text-[9px] font-mono text-slate-500 shrink-0">~9ms</span>
                 </a>
