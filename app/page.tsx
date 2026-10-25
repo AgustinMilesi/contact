@@ -1,9 +1,5 @@
-import ContactForm from "./components/ContactForm";
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return (
-    <main className="min-h-screen bg-[#0A0E14] text-slate-100 flex flex-col justify-between">
-      <ContactForm />
-    </main>
-  );
+  redirect("https://saas-am.vercel.app/contact");
 }
